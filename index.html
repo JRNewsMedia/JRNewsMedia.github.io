@@ -4,31 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JR News Media - Local News from Achalpur & Amravati</title>
-    <title>JR News Media - Local News from Achalpur & Amravati</title>
-<meta name="description" content="Taaza khabar, local reporting, aur exclusive stories Achalpur, Amravati, aur Maharashtra se. Get the latest news, politics, sports, and entertainment updates from JR News Media.">
+    <meta name="description" content="Taaza khabar, local reporting, aur exclusive stories Achalpur, Amravati, aur Maharashtra se. Get the latest news, politics, sports, and entertainment updates from JR News Media.">
 
     <style>
-        /* Desi CSS shuru! */
+        /* Desi CSS shuru! (Clean & Professional Look) */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f0f0f0; /* Light Gray Background */
             color: #333;
+            line-height: 1.5;
         }
 
         /* Header (News Logo & Nav) */
         .header {
-            background-color: #D32F2F; /* Red color for news header */
+            background-color: #D32F2F; /* News Red */
             color: white;
             padding: 15px 0;
             text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
 
         .logo {
-            font-size: 28px;
-            font-weight: bold;
+            font-size: 32px; /* Bigger Logo */
+            font-weight: 900; /* Extra Bold */
             margin: 0;
+            letter-spacing: 1px;
         }
 
         .navbar {
@@ -44,6 +46,8 @@
             padding: 14px 20px;
             text-decoration: none;
             font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s;
         }
 
         .navbar a:hover {
@@ -53,12 +57,14 @@
         /* Main Content Area */
         .container {
             width: 90%;
-            margin: auto;
+            max-width: 1200px; /* Max width for large screens */
+            margin: 20px auto;
             overflow: hidden;
-            padding: 20px 0;
+            padding: 0;
         }
 
         .main-content {
+            /* Desktop View Settings */
             float: left;
             width: 65%;
             box-sizing: border-box;
@@ -66,56 +72,113 @@
         }
 
         .sidebar {
+            /* Desktop View Settings */
             float: right;
             width: 35%;
-            background: #fff;
-            padding: 10px;
+            background: #ffffff; 
+            padding: 20px;
             box-sizing: border-box;
             border-left: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
         }
 
         /* News Article Design */
         .news-article {
             background: #fff;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 25px; /* Increased padding */
+            margin-bottom: 25px; /* Increased spacing */
+            border-radius: 8px; /* Softer corners */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Better shadow */
+            border-left: 5px solid #D32F2F; /* Red highlight line */
         }
 
         .article-title {
-            color: #D32F2F;
+            color: #1a1a1a; /* Dark title for professionalism */
+            font-size: 24px;
+            font-weight: 700;
             margin-top: 0;
+            line-height: 1.3;
+        }
+        
+        /* New style for read more link */
+        .read-more {
+            color: #D32F2F;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 10px;
+            border-bottom: 2px solid #D32F2F;
+            padding-bottom: 2px;
+        }
+        
+        .read-more:hover {
+            color: #E57373;
+            border-bottom-color: #E57373;
         }
 
         .meta {
-            font-size: 12px;
+            font-size: 13px;
             color: #777;
             margin-bottom: 15px;
+            font-style: italic;
         }
 
         .article-image {
             width: 100%;
             height: auto;
             margin-bottom: 15px;
-            border-radius: 3px;
+            border-radius: 4px;
         }
 
+        /* Sidebar Trending List Style */
+        .sidebar h3 {
+            color: #D32F2F;
+            border-bottom: 2px solid #D32F2F;
+            padding-bottom: 5px;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar li {
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+        .sidebar li a {
+            color: #333;
+            text-decoration: none;
+        }
+        .sidebar li a:hover {
+            color: #D32F2F;
+        }
+        
         /* Footer */
         .footer {
             background-color: #333;
             color: white;
             text-align: center;
             padding: 15px 0;
-            margin-top: 20px;
+            margin-top: 30px;
         }
 
-        /* Responsive Design (Mobile First) */
+        /* Responsive Design (Mobile Fix) */
         @media (max-width: 768px) {
+            .container {
+                width: 95%; /* Mobile par full width */
+            }
             .main-content, .sidebar {
                 width: 100%;
                 float: none;
                 padding-right: 0;
+                padding-left: 0;
+                border-left: none;
+            }
+            .sidebar {
+                margin-top: 15px;
+            }
+            .news-article {
+                border-radius: 0; /* Full edge-to-edge look */
                 border-left: none;
             }
         }
@@ -129,7 +192,7 @@
         <p style="font-size: 14px; margin: 0;">*Taaza Khabar, Desi Zabaan Mein*</p>
     </header>
     <nav class="navbar">
-        <a href="#">HOME</a>
+        <a href="index.html">HOME</a>
         <a href="#">LOCAL (Amravati)</a>
         <a href="#">SPORTS</a>
         <a href="#">POLITICS</a>
@@ -139,67 +202,44 @@
     <div class="container">
         <section class="main-content">
             
-<div class="container">
-    <section class="main-content">
+            <article class="news-article">
+                <h2 class="article-title">Achalpur Nagar Nigam Chunav ki Ghosna Jald: December 2025 Ya January 2026 Mein Sambhav</h2>
+                <p class="meta">By JR News Reporter | October 27, 2025 | Local Politics</p>
+                <img src="images/Achalpur%20Nagar%20Nigam.jpg" alt="Achalpur Nagar Nigam Building Chunav Image" class="article-image">
+                <p>Achalpur Nagar Nigam Chunav ki ghoshna jald hone ki sambhavna hai. Sarkaari sootron ke mutabik, sthaniya nagar nigam chunav December 2025 ya January 2026 mein ho sakte hain. Is khabar se rajneetik sargarmi badh gayi hai.</p>
+                <a href="articles/achalpur-chunav-ghosna-jald.html" class="read-more">Poori Khabar Padhein...</a>
+            </article>
+
+            <article class="news-article">
+                <h2 class="article-title">Achalpur Chunav: Umeedwaron Ne Taiyaari Shuru Ki, Gupt Meeting Ka Daura Tezz</h2>
+                <p class="meta">By Political Correspondent | October 27, 2025 | Local Politics</p>
+                <img src="images/Achalpur%20Nagar%20Nigam.jpg" alt="Achalpur meeting image" class="article-image"> 
+                <p>Nagar Nigam chunav ki khabar aate hi, Achalpur ke sambhavit umeedwaron ne kshetra mein gupt meeting aur logon se milna shuru kar diya hai. Har party jald se jald apne karyakartaon ko taiyaar karne mein lagi hai.</p>
+                <a href="articles/umeedwar-taiyari.html" class="read-more">Poori Khabar Padhein...</a>
+            </article>
         
-        <article class="news-article">
-            <h2 class="article-title">Achalpur Nagar Nigam Chunav ki Ghosna Jald: December 2025 Ya January 2026 Mein Sambhav</h2>
-            <p class="meta">By JR News Reporter | October 27, 2025 | Local Politics</p>
-            <img src="images/Achalpur%20Nagar%20Nigam.jpg" alt="Achalpur Nagar Nigam Building Chunav Image" class="article-image">
-            <p>Achalpur Nagar Nigam Chunav ki ghoshna jald hone ki sambhavna hai. Sarkaari sootron ke mutabik, sthaniya nagar nigam chunav December 2025 ya January 2026 mein ho sakte hain. Is khabar se rajneetik sargarmi badh gayi hai.</p>
-            <a href="articles/achalpur-chunav-ghosna-jald.html" style="color: #D32F2F; text-decoration: none; font-weight: bold;">Poori Khabar Padhein...</a>
-        </article>
-
-        <article class="news-article">
-            <h2 class="article-title">Achalpur Chunav: Umeedwaron Ne Taiyaari Shuru Ki, Gupt Meeting Ka Daura Tezz</h2>
-            <p class="meta">By Political Correspondent | October 27, 2025 | Local Politics</p>
-            <img src="images/Achalpur%20Nagar%20Nigam.jpg" alt="Achalpur meeting image" class="article-image"> 
-            <p>Nagar Nigam chunav ki khabar aate hi, Achalpur ke sambhavit umeedwaron ne kshetra mein gupt meeting aur logon se milna shuru kar diya hai. Har party jald se jald apne karyakartaon ko taiyaar karne mein lagi hai.</p>
-            <a href="articles/umeedwar-taiyari.html" style="color: #D32F2F; text-decoration: none; font-weight: bold;">Poori Khabar Padhein...</a>
-        </article>
-
-        <article class="news-article" style="text-align: center; border: 2px dashed #4CAF50; padding: 20px; background-color: #F8FFF8;">
-            <h2 class="article-title" style="color: #4CAF50; font-size: 24px; margin-top: 0; border-bottom: none;">AGLA ARTICLE JALD AA RAHA HAI!</h2>
-            <p style="font-size: 16px; font-weight: bold; color: #333;">TOPIC: Amravati Nagar Nigam Ke Naye Niyam</p>
-            <p style="font-style: italic; color: #666; margin-bottom: 10px;">Hamare saath bane rahein taaki aap koi bhi zaroori local khabar miss na karein.</p>
-            <a href="#" style="color: #4CAF50; text-decoration: none; font-weight: bold; border: 1px solid #4CAF50; padding: 5px 10px; border-radius: 5px;">Latest Updates Ke Liye Check Karein</a>
-        </article>
-    
-    </section>
-
-    <aside class="sidebar">
-        <h3>🔥 Trending News</h3>
-        <ul style="list-style-type: none; padding: 0;">
-            <li style="margin-bottom: 10px; padding-bottom: 5px; border-bottom: 1px dotted #ccc;">- <a href="#" style="color: #D32F2F; text-decoration: none;">Naye Sports Stadium Ka Udghatan</a></li>
-            <li style="margin-bottom: 10px; padding-bottom: 5px; border-bottom: 1px dotted #ccc;">- <a href="#" style="color: #D32F2F; text-decoration: none;">Petrol Ke Daam Mein Badlav</a></li>
-            <li style="margin-bottom: 10px; padding-bottom: 5px;">- <a href="#" style="color: #D32F2F; text-decoration: none;">Local Weather Alert</a></li>
-        </ul>
-
-        <h3 style="margin-top: 30px;">Social Connect</h3>
-        <p>Follow JR News Media on all platforms for real-time updates.</p>
-        <p style="margin-top: 20px; font-size: 14px; font-weight: bold;">
-            <a href="https://www.instagram.com/sharik.khan.jr?igsh=N3ExY25sZW9rOTN0" target="_blank" style="color: #D32F2F; text-decoration: none; display: block; margin-bottom: 5px;">Instagram</a>
-            <a href="https://www.facebook.com/Sharikkhanjr1" target="_blank" style="color: #D32F2F; text-decoration: none; display: block; margin-bottom: 5px;">Facebook</a>
-            <a href="https://youtube.com/@sharikkhanjr?si=w3jCs5UJTPf2-arm" target="_blank" style="color: #D32F2F; text-decoration: none; display: block;">YouTube (Artist)</a>
-        </p>
-    </aside>
-</div>
+        </section>
 
         <aside class="sidebar">
             <h3>🔥 Trending News</h3>
             <ul style="list-style: none; padding: 0;">
-                <li style="margin-bottom: 10px;"><a href="#" style="color: #D32F2F; text-decoration: none;">- Naye Sports Stadium Ka Udghatan</a></li>
-                <li style="margin-bottom: 10px;"><a href="#" style="color: #D32F2F; text-decoration: none;">- Petrol Ke Daam Mein Badlav</a></li>
-                <li style="margin-bottom: 10px;"><a href="#" style="color: #D32F2F; text-decoration: none;">- Local Weather Alert</a></li>
+                <li style="margin-bottom: 10px;"><a href="#" style="color: #333; text-decoration: none;">- Naye Sports Stadium Ka Udghatan</a></li>
+                <li style="margin-bottom: 10px;"><a href="#" style="color: #333; text-decoration: none;">- Petrol Ke Daam Mein Badlav</a></li>
+                <li style="margin-bottom: 10px;"><a href="#" style="color: #333; text-decoration: none;">- Local Weather Alert</a></li>
             </ul>
 
             <h3 style="margin-top: 30px;">Social Connect</h3>
             <p>Follow JR News Media on all platforms for real-time updates.</p>
-            </aside>
+            <p style="margin-top: 20px; font-size: 14px; font-weight: bold;">
+                <a href="https://www.instagram.com/sharik.khan.jr?igsh=N3ExY25sZW9rOTN0" target="_blank" style="color: #D32F2F; text-decoration: none; display: block; margin-bottom: 5px;">Instagram</a>
+                <a href="https://www.facebook.com/Sharikkhanjr1" target="_blank" style="color: #D32F2F; text-decoration: none; display: block; margin-bottom: 5px;">Facebook</a>
+                <a href="https://youtube.com/@sharikkhanjr?si=w3jCs5UJTPf2-arm" target="_blank" style="color: #D32F2F; text-decoration: none; display: block;">YouTube (Artist)</a>
+            </p>
+        </aside>
     </div>
 
     <footer class="footer">
-        &copy; 2025 JR News Media. All rights reserved. | Contact: [🔒]
+        &copy; 2025 JR News Media. All rights reserved. | Contact: <a href="mailto:sharikk955@gmail.com" style="color: white; text-decoration: none;">sharikk955@gmail.com</a>
     </footer>
 
 </body>
