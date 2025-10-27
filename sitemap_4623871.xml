@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+       <loc>https://jrnewsmedia.github.io/index.html</loc>
+       <lastmod>2025-10-27T13:55:10+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://jrnewsmedia.github.io/local.html</loc>
+       <lastmod>2025-10-27T13:55:10+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://jrnewsmedia.github.io/sports.html</loc>
+       <lastmod>2025-10-27T13:55:10+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://jrnewsmedia.github.io/entertainment.html</loc>
+       <lastmod>2025-10-27T13:55:10+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://jrnewsmedia.github.io/articles/achalpur-chunav-ghosna-jald.html</loc>
+       <lastmod>2025-10-27T13:55:10+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://jrnewsmedia.github.io/articles/umeedwar-taiyari.html</loc>
+       <lastmod>2025-10-27T13:55:10+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+</urlset>
