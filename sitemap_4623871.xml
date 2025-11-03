@@ -38,4 +38,17 @@
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
+  <url>
+    
+    <loc>https://jrnewsmedia.github.io/articles/mansi-srivastava-bday-message-jr-news.html</loc>
+    <lastmod>2025-11-03T13:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+</url>
+<url>
+    <loc>https://jrnewsmedia.github.io/articles/sharik-khan-jr-new-song.html</loc>
+    <lastmod>2025-11-03T13:15:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+</url>
 </urlset>
