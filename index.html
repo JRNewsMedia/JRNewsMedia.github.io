@@ -506,7 +506,32 @@
             <p style="margin-top: 15px;">&copy; 2026 JR News Media Group. All Rights Reserved.</p>
         </div>
     </footer>
+<script>
+  const menuBtn = document.querySelector('.menu-btn');
+  const sideNav = document.getElementById("sideNav");
+  const closeBtn = document.getElementById("closeBtn");
+  const overlay = document.getElementById("overlay");
 
+  // Jab 3 dots (menu-btn) par click ho toh menu khule
+  menuBtn.addEventListener('click', () => {
+    sideNav.style.width = "250px";
+    overlay.style.display = "block";
+  });
+
+  // Jab 'X' (closeBtn) par click ho toh menu band ho
+  closeBtn.addEventListener('click', () => {
+    sideNav.style.width = "0";
+    overlay.style.display = "none";
+  });
+
+  // Jab menu ke bahar (dark area) click ho toh bhi band ho jaye
+  overlay.addEventListener('click', () => {
+    sideNav.style.width = "0";
+    overlay.style.display = "none";
+  });
+</script>
+
+    
 </body>
 </html>
       
