@@ -3,245 +3,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Hub | JR News Media</title>
+    <title>Music Universe | JR News Media</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --music-gold: #D4AF37;
-            --primary-red: #C62828;
-            --deep-black: #0a0a0a;
-            --card-bg: #ffffff;
-            --text-gray: #555;
+            --music-gold: #FFD700;
+            --primary-red: #D32F2F;
+            --dark-bg: #121212;
+            --card-shadow: rgba(0,0,0,0.15);
         }
 
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
-            background-color: #f0f2f5;
-            color: #222;
+            background-color: #f8f9fa;
+            color: #333;
         }
 
-        /* --- HEADER --- */
-        .main-header {
-            background: var(--deep-black);
-            padding: 15px 20px;
-            border-bottom: 2px solid var(--music-gold);
+        /* --- STYLISH HEADER --- */
+        .header {
+            background: var(--dark-bg);
+            padding: 20px;
+            text-align: center;
+            border-bottom: 4px solid var(--primary-red);
             position: sticky;
             top: 0;
             z-index: 1000;
-            display: flex;
-            justify-content: center;
         }
 
-        .logo-text {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 22px;
-            font-weight: 900;
+        .header a {
             color: white;
             text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 22px;
+            letter-spacing: 2px;
         }
 
-        .logo-text span { color: var(--music-gold); }
-
-        /* --- MUSIC HUB HERO SECTION --- */
-        .music-hero {
-            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://i.postimg.cc/fyrn6JgC/Sharik-khan-jr-musical-artist.png');
+        /* --- HERO SECTION --- */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://i.postimg.cc/fyrn6JgC/Sharik-khan-jr-musical-artist.png');
             background-size: cover;
             background-position: center;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             color: white;
-            padding: 60px 20px;
             text-align: center;
             border-bottom: 5px solid var(--music-gold);
         }
 
-        .music-hero h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 35px;
-            margin: 0;
-            text-transform: uppercase;
-            color: var(--music-gold);
-        }
+        .hero h1 { font-family: 'Montserrat', sans-serif; font-size: 36px; margin: 0; color: var(--music-gold); }
+        .hero p { font-size: 16px; margin-top: 10px; opacity: 0.9; }
 
-        .music-hero p {
-            max-width: 600px;
-            margin: 15px auto;
-            font-size: 16px;
-            line-height: 1.6;
-            color: #ddd;
-        }
+        .container { max-width: 1100px; margin: 30px auto; padding: 0 15px; }
 
-        .container {
-            max-width: 900px; 
-            margin: -30px auto 40px;
-            padding: 0 15px;
-        }
-
-        /* --- GRID DESIGN --- */
+        /* --- GRID SYSTEM --- */
         .music-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
+            gap: 25px;
         }
 
-        .music-card {
-            background: var(--card-bg);
+        .card {
+            background: white;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            box-shadow: 0 6px 15px var(--card-shadow);
+            transition: 0.3s;
             text-decoration: none;
             color: inherit;
-            transition: 0.4s;
+            display: flex;
+            flex-direction: column;
             border: 1px solid #eee;
         }
 
-        .music-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-        }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 12px 25px rgba(0,0,0,0.2); }
 
-        .img-wrap { width: 100%; height: 200px; overflow: hidden; }
-        .img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+        .card-img { width: 100%; height: 200px; object-fit: cover; }
 
-        .info-wrap { padding: 20px; }
+        .card-body { padding: 20px; flex-grow: 1; }
 
         .tag {
-            background: var(--music-gold);
-            color: black;
+            background: var(--primary-red);
+            color: white;
             font-size: 10px;
             font-weight: 900;
             padding: 4px 10px;
-            border-radius: 50px;
+            border-radius: 4px;
             text-transform: uppercase;
             display: inline-block;
             margin-bottom: 10px;
         }
 
-        .m-title {
+        .card-title {
             font-family: 'Montserrat', sans-serif;
             font-size: 17px;
-            margin: 0 0 12px 0;
+            margin: 0;
             line-height: 1.4;
-            color: var(--deep-black);
-        }
-
-        .m-desc {
-            font-size: 13px;
-            color: var(--text-gray);
-            line-height: 1.5;
-            margin-bottom: 15px;
-        }
-
-        /* --- BOTTOM TEXT SECTION --- */
-        .music-footer-text {
-            background: white;
-            padding: 40px 20px;
-            text-align: center;
-            border-radius: 12px;
-            margin-top: 40px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-
-        .music-footer-text h3 {
-            font-family: 'Montserrat', sans-serif;
-            color: var(--primary-red);
-            text-transform: uppercase;
-        }
-
-        .music-footer-text p {
-            font-size: 14px;
-            color: #666;
-            max-width: 700px;
-            margin: 10px auto;
-            line-height: 1.7;
+            color: #111;
         }
 
         /* --- FOOTER --- */
         .footer {
-            background: var(--deep-black);
-            color: #fff;
+            background: var(--dark-bg);
+            color: white;
             padding: 40px 20px;
             text-align: center;
+            margin-top: 50px;
         }
 
         .btn-home {
-            display: inline-block;
-            padding: 10px 25px;
-            background: var(--music-gold);
-            color: black;
+            background: var(--primary-red);
+            color: white;
+            padding: 12px 30px;
             text-decoration: none;
             font-weight: bold;
-            border-radius: 5px;
+            border-radius: 50px;
+            display: inline-block;
             margin-bottom: 20px;
+            transition: 0.3s;
         }
+        .btn-home:hover { background: #b71c1c; }
     </style>
 </head>
 <body>
 
-    <header class="main-header">
-        <a href="../index.html" class="logo-text">JR NEWS <span>MUSIC</span></a>
+    <header class="header">
+        <a href="../index.html">JR NEWS 🎵 MUSIC HUB</a>
     </header>
 
-    <div class="music-hero">
-        <h1>Official Music Hub</h1>
-        <p>Explore the latest tracks, digital milestones, and exclusive updates from Sharik Khan Jr. Stay connected with the rhythm of independent artistry.</p>
+    <div class="hero">
+        <h1>Music Universe</h1>
+        <p>Official Releases • Digital Milestones • Artist Updates</p>
     </div>
 
     <div class="container">
-        
         <div class="music-grid">
-            
-            <a href="../articles/independent-artist-sharik-khan-jr-knowledge-panel-seo-visibility-achalpur-2026.html" class="music-card">
-                <div class="img-wrap"><img src="https://i.postimg.cc/Mp18XCXJ/sharik-khan-jr-google-knowledge-panel-2026.png"></div>
-                <div class="info-wrap">
-                    <span class="tag">Digital Assets</span>
-                    <h2 class="m-title">Google Knowledge Panel Strengthens Identity in 2026</h2>
-                    <p class="m-desc">How Sharik Khan Jr is dominating search results with verified artist presence.</p>
+
+            <a href="../articles/independent-artist-sharik-khan-jr-knowledge-panel-seo-visibility-achalpur-2026.html" class="card">
+                <img src="https://i.postimg.cc/Mp18XCXJ/sharik-khan-jr-google-knowledge-panel-2026.png" class="card-img">
+                <div class="card-body">
+                    <span class="tag">Digital Identity</span>
+                    <h2 class="card-title">Google Knowledge Panel Strengthens Identity in 2026</h2>
                 </div>
             </a>
 
-            <a href="../articles/sharik-khan-jr-songs-attention-streaming-platforms-india-2026.html" class="music-card">
-                <div class="img-wrap"><img src="https://i.postimg.cc/XqkKPMdG/sharik-khan-jr-songs-gaining-attention-streaming-platforms-2026.png"></div>
-                <div class="info-wrap">
+            <a href="../articles/sharik-khan-jr-songs-attention-streaming-platforms-india-2026.html" class="card">
+                <img src="https://i.postimg.cc/XqkKPMdG/sharik-khan-jr-songs-gaining-attention-streaming-platforms-2026.png" class="card-img">
+                <div class="card-body">
                     <span class="tag">Streaming</span>
-                    <h2 class="m-title">Songs Gaining Global Momentum on Spotify & Platforms</h2>
-                    <p class="m-desc">Independent music from Achalpur reaches international listeners this year.</p>
+                    <h2 class="card-title">Songs Gaining Global Momentum on Digital Platforms</h2>
                 </div>
             </a>
 
-            <a href="../articles/iran-ki-awaz-naat-sharik-khan-jr-aqsa-march-2026-news.html" class="music-card">
-                <div class="img-wrap"><img src="https://i.postimg.cc/vTVLjjxV/Sharik-khan-jr-new-Hona-Naat-Iran-ki-awaz-Aqsa.jpg"></div>
-                <div class="info-wrap">
+            <a href="../articles/independent-music-india-2026-digital-growth-sharik-khan-jr.html" class="card">
+                <img src="https://i.postimg.cc/PxJwqQ8W/Sharik-khan-jr-google-knowledge-panel.png" class="card-img">
+                <div class="card-body">
+                    <span class="tag">Industry Trends</span>
+                    <h2 class="card-title">Rise of Independent Music Artists in India 2026</h2>
+                </div>
+            </a>
+
+            <a href="../articles/sharik-khan-jr-google-knowledge-panel-importance-2026.html" class="card">
+                <img src="https://i.postimg.cc/fyrn6JgC/Sharik-khan-jr-musical-artist.png" class="card-img">
+                <div class="card-body">
+                    <span class="tag">Digital Growth</span>
+                    <h2 class="card-title">Importance of Knowledge Panel for Independent Artists</h2>
+                </div>
+            </a>
+
+            <a href="../articles/iran-ki-awaz-naat-sharik-khan-jr-aqsa-march-2026-news.html" class="card">
+                <img src="https://i.postimg.cc/vTVLjjxV/Sharik-khan-jr-new-Hona-Naat-Iran-ki-awaz-Aqsa.jpg" class="card-img">
+                <div class="card-body">
                     <span class="tag">New Release</span>
-                    <h2 class="m-title">Iran Ki Awaz: A Spiritual Musical Tribute 2026</h2>
-                    <p class="m-desc">The latest emotional release that is touching hearts across the region.</p>
+                    <h2 class="card-title">Iran Ki Awaz Naat: Emotional Aqsa Tribute Released</h2>
                 </div>
             </a>
 
-            <a href="../articles/sharik-khan-jr-new-song.html" class="music-card">
-                <div class="img-wrap"><img src="https://raw.githubusercontent.com/JRNewsMedia/JRNewsMedia.github.io/main/images/20251023_143435.jpg"></div>
-                <div class="info-wrap">
+            <a href="../articles/iran-ka-nara-palestine-ka-nara-sharik-khan-jr-noha-2026.html" class="card">
+                <img src="https://i.postimg.cc/JhnGJQD8/Iran-Ka-Nara-Hai-Masjid-e-Aqsa-Hamara-Sharik-khan-jr-song.png" class="card-img">
+                <div class="card-body">
+                    <span class="tag">Spiritual</span>
+                    <h2 class="card-title">Iran Ka Nara Palestine Ka Nara - New Noha 2026</h2>
+                </div>
+            </a>
+
+            <a href="../articles/sharik-khan-jr-iran-zindabad-rahega-sufi-qawwali.html" class="card">
+                <img src="https://assets-news-bcdn.dailyhunt.in/cmd/resize/800x533_75/fetchdata20/images/18/16/19/181619533ceabaddcd7f8058abf671d0d211742c3484fd9e562a7cb3a77e7d83.webp" class="card-img">
+                <div class="card-body">
+                    <span class="tag">Sufi Qawwali</span>
+                    <h2 class="card-title">Achalpur Artist Releases "Iran Zindabad Rahega"</h2>
+                </div>
+            </a>
+
+            <a href="../articles/sharik-khan-jr-youtube-10k.html" class="card">
+                <img src="https://i.postimg.cc/zXZGvK3g/Sharik_khan_jr_10k_Family.png" class="card-img">
+                <div class="card-body">
+                    <span class="tag">Milestone</span>
+                    <h2 class="card-title">YouTube Family Reaches 10,000 Subscribers</h2>
+                </div>
+            </a>
+
+            <a href="../articles/sharik-khan-jr-independent-music-artist.html" class="card">
+                <img src="https://raw.githubusercontent.com/JRNewsMedia/JRNewsMedia.github.io/refs/heads/main/images/Sharik%20khan%20jr%20music%20artists%20achalpur.png" class="card-img">
+                <div class="card-body">
+                    <span class="tag">Profile</span>
+                    <h2 class="card-title">Sharik Khan Jr: Making Waves as Independent Artist</h2>
+                </div>
+            </a>
+
+            <a href="../articles/sharik-khan-jr-shakir-dada-music-news.html" class="card">
+                <img src="https://m.media-amazon.com/images/I/41PX553WtjL._SX354_SY354_BL0_QL100__UXNaN_FMjpg_QL85_.jpg" class="card-img">
+                <div class="card-body">
+                    <span class="tag">New EP</span>
+                    <h2 class="card-title">Shakir Dada Series: Four Official Songs Released</h2>
+                </div>
+            </a>
+
+            <a href="../articles/sharik-khan-jr-comeback-news.html" class="card">
+                <img src="https://raw.githubusercontent.com/JRNewsMedia/JRNewsMedia.github.io/refs/heads/main/images/Are%20kya%20bolti%20Meri%20Achalpur%20Ki%20Public.jpeg" class="card-img">
+                <div class="card-body">
+                    <span class="tag">Viral Hit</span>
+                    <h2 class="card-title">Achalpur Anthem Re-Released Across Platforms</h2>
+                </div>
+            </a>
+
+            <a href="../articles/sharik-khan-jr-new-song.html" class="card">
+                <img src="https://raw.githubusercontent.com/JRNewsMedia/JRNewsMedia.github.io/main/images/20251023_143435.jpg" class="card-img">
+                <div class="card-body">
                     <span class="tag">Hip-Hop</span>
-                    <h2 class="m-title">MERA ATTITUDE: The New Anthem for the Streets</h2>
-                    <p class="m-desc">Sharik Khan Jr drops a powerful rap track that defines independent style.</p>
+                    <h2 class="card-title">New Hit Single "MERA ATTITUDE" Out Now</h2>
                 </div>
             </a>
 
         </div>
-
-        <div class="music-footer-text">
-            <h3>Exclusive Music Coverage</h3>
-            <p>Welcome to the dedicated Music Hub of JR News Media. We provide the most accurate and up-to-date information regarding independent music artists. Our focus is on bringing you the stories behind the beats, the struggle, and the success of artists like Sharik Khan Jr who are making waves in the industry.</p>
-            <p><strong>Stay Tuned:</strong> We update this section weekly with new releases, music videos, and official announcements.</p>
-        </div>
-
     </div>
 
     <footer class="footer">
-        <a href="../index.html" class="btn-home">BACK TO GLOBAL NEWS</a>
-        <p>&copy; 2026 JR News Media Group. All Rights Reserved.</p>
-        <p style="font-size: 11px; color: #555;">Founded by Sharik Khan Jr | Achalpur, Maharashtra</p>
+        <a href="../index.html" class="btn-home">← BACK TO GLOBAL NEWS</a>
+        <p>&copy; 2026 JR News Media Group | Founded by Sharik Khan Jr</p>
     </footer>
 
 </body>
