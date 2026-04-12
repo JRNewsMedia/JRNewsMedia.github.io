@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politics & Governance | JR News Media</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gov-blue: #002D62;
+            --gov-gold: #FFD700;
+            --deep-black: #1a1a1a;
+            --white: #ffffff;
+            --bg-gray: #eef2f5;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            background-color: var(--bg-gray);
+            color: #333;
+        }
+
+        /* --- OFFICIAL HEADER --- */
+        .gov-header {
+            background: var(--gov-blue);
+            padding: 15px;
+            text-align: center;
+            border-bottom: 3px solid var(--gov-gold);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .gov-header a {
+            color: white;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 14px;
+        }
+
+        /* --- HERO BANNER --- */
+        .politics-hero {
+            background: #fff;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .politics-hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 28px;
+            color: var(--gov-blue);
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .politics-hero p {
+            font-size: 14px;
+            color: #666;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        .section-label {
+            border-bottom: 2px solid var(--gov-blue);
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: var(--gov-blue);
+            text-transform: uppercase;
+            font-size: 13px;
+        }
+
+        /* --- POLITICS NEWS CARDS --- */
+        .gov-card {
+            background: white;
+            margin-bottom: 25px;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            border-top: 5px solid var(--gov-blue);
+            transition: 0.3s;
+        }
+
+        .gov-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .gov-content {
+            padding: 25px;
+        }
+
+        .gov-content span {
+            color: #d32f2f;
+            font-weight: bold;
+            font-size: 11px;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .gov-content h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 22px;
+            margin: 0 0 12px 0;
+            line-height: 1.4;
+            color: var(--deep-black);
+        }
+
+        .gov-content p {
+            font-size: 15px;
+            color: #444;
+            line-height: 1.7;
+        }
+
+        .read-btn {
+            display: inline-block;
+            margin-top: 15px;
+            color: var(--gov-blue);
+            font-weight: bold;
+            font-size: 13px;
+            text-decoration: underline;
+        }
+
+        /* --- STAY UPDATED BOX --- */
+        .update-box {
+            background: var(--deep-black);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 4px;
+            margin-top: 40px;
+        }
+
+        /* --- FOOTER --- */
+        .footer {
+            background: #f8f9fa;
+            color: #333;
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 1px solid #ddd;
+            margin-top: 50px;
+        }
+
+        .btn-home {
+            background: var(--gov-blue);
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 2px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="gov-header">
+        <a href="../index.html">JR NEWS | POLITICS & GOVERNANCE</a>
+    </header>
+
+    <div class="politics-hero">
+        <h1>Politics Hub</h1>
+        <p>Official Governance Updates • Election Analysis • Public Policy</p>
+    </div>
+
+    <div class="container">
+        
+        <div class="section-label">Top Governance Reports</div>
+
+        <a href="../articles/achalpur-chunav-ghosna-jald.html" class="gov-card">
+            <div class="gov-content">
+                <span>Breaking Report • Achalpur</span>
+                <h2>Achalpur Nagar Nigam Chunav: Election Body Prepares for Announcement</h2>
+                <p>Official sources suggest that the schedule for the local body elections in Achalpur and surrounding regions will be finalized shortly. Detailed ward analysis coming soon.</p>
+                <div class="read-btn">VIEW FULL ANALYSIS →</div>
+            </div>
+        </a>
+
+        <a href="../articles/umeedwar-taiyari.html" class="gov-card">
+            <div class="gov-content">
+                <span>Election Prep • Amravati</span>
+                <h2>Local Leaders Begin Strategic Meetings Ahead of Municipal Polls</h2>
+                <p>Governance updates from Amravati District show increased political activity as candidates prepare for the upcoming governance challenges in 2026.</p>
+                <div class="read-btn">VIEW FULL ANALYSIS →</div>
+            </div>
+        </a>
+
+        <div class="update-box">
+            <h3 style="margin:0; font-family: 'Montserrat'; color: var(--gov-gold);">GOVERNANCE WATCH</h3>
+            <p style="margin:15px 0 0; font-size: 14px; color: #bbb;">Hum Amravati aur Achalpur ki har choti-badi political halchal par nazar rakh rahe hain. Agli badi report ke liye jude rahein.</p>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <a href="../index.html" class="btn-home">BACK TO HOME</a>
+        <p style="font-weight: bold;">JR News Media Group</p>
+        <p style="font-size: 11px; color: #888;">&copy; 2026 Official Governance Portal. Dedicated to transparent journalism.</p>
+    </footer>
+
+</body>
+      </html>
+
