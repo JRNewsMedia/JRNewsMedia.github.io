@@ -2,9 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://jrnewsmedia.github.io/</loc><priority>1.0</priority></url>
   <url><loc>https://jrnewsmedia.github.io/index.html</loc><priority>0.8</priority></url>
-  <url><loc>https://jrnewsmedia.github.io/local.html</loc><priority>0.8</priority></url>
-  <url><loc>https://jrnewsmedia.github.io/sports.html</loc><priority>0.8</priority></url>
-  <url><loc>https://jrnewsmedia.github.io/entertainment.html</loc><priority>0.8</priority></url>
+  
+  <url><loc>https://jrnewsmedia.github.io/about.html</loc><priority>0.7</priority></url>
+  <url><loc>https://jrnewsmedia.github.io/contact.html</loc><priority>0.7</priority></url>
+  <url><loc>https://jrnewsmedia.github.io/privacy.html</loc><priority>0.5</priority></url>
+  <url><loc>https://jrnewsmedia.github.io/music/music-updates.html</loc><priority>0.8</priority></url>
+  <url><loc>https://jrnewsmedia.github.io/biography/profile.html</loc><priority>0.8</priority></url>
+  <url><loc>https://jrnewsmedia.github.io/local/news.html</loc><priority>0.8</priority></url>
+  <url><loc>https://jrnewsmedia.github.io/politics/governance.html</loc><priority>0.8</priority></url>
+  <url><loc>https://jrnewsmedia.github.io/lifestyle/lifestyle.html</loc><priority>0.8</priority></url>
+  <url><loc>https://jrnewsmedia.github.io/team/updates.html</loc><priority>0.7</priority></url>
+
+  <url><loc>https://jrnewsmedia.github.io/local.html</loc><priority>0.1</priority></url>
+  <url><loc>https://jrnewsmedia.github.io/sports.html</loc><priority>0.1</priority></url>
+  <url><loc>https://jrnewsmedia.github.io/entertainment.html</loc><priority>0.1</priority></url>
+
   <url><loc>https://jrnewsmedia.github.io/articles/sharik-khan-jr-new-song.html</loc></url>
   <url><loc>https://jrnewsmedia.github.io/articles/umeedwar-taiyari.html</loc></url>
   <url><loc>https://jrnewsmedia.github.io/articles/achalpur-chunav-ghosna-jald.html</loc></url>
@@ -33,4 +45,3 @@
   <url><loc>https://jrnewsmedia.github.io/articles/sharik-khan-jr-songs-attention-streaming-platforms-india-2026.html</loc></url>
   <url><loc>https://jrnewsmedia.github.io/articles/independent-artist-sharik-khan-jr-knowledge-panel-seo-visibility-achalpur-2026.html</loc></url>
 </urlset>
-                                                                                               
