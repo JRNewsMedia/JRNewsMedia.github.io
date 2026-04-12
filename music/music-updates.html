@@ -1,1 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Updates | JR News Media</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-red: #C62828;
+            --deep-black: #121212;
+            --white: #ffffff;
+            --bg-gray: #f5f7f9;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            background-color: var(--bg-gray);
+            color: #333;
+        }
+
+        /* --- HEADER --- */
+        .main-header {
+            background: var(--white);
+            padding: 15px 20px;
+            border-bottom: 3px solid var(--primary-red);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: 900;
+            color: var(--deep-black);
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .logo-text span { color: var(--primary-red); }
+
+        /* --- CATEGORY BANNER --- */
+        .category-header {
+            background: var(--deep-black);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .category-header h1 {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            font-size: 28px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .category-header p {
+            color: #bbb;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .container {
+            max-width: 800px; 
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* --- MUSIC ARTICLE CARDS --- */
+        .news-card {
+            background: var(--white);
+            margin-bottom: 25px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            transition: 0.3s;
+        }
+
+        .news-card:hover { transform: scale(1.02); }
+
+        .image-box img { width: 100%; display: block; height: auto; }
+
+        .content-box { padding: 20px; }
+
+        .article-category { 
+            color: var(--primary-red); 
+            font-size: 10px; 
+            font-weight: 800; 
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .article-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            margin: 0 0 10px 0;
+            line-height: 1.4;
+        }
+
+        .read-more {
+            color: var(--primary-red);
+            font-weight: 800;
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+
+        /* --- FOOTER --- */
+        .footer {
+            background: var(--deep-black);
+            color: #fff;
+            padding: 30px 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .back-home {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--white);
+            text-decoration: none;
+            font-weight: bold;
+            border: 1px solid var(--white);
+            padding: 8px 20px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <a href="../index.html" class="logo-text">JR NEWS <span>MEDIA</span></a>
+    </header>
+
+    <div class="category-header">
+        <h1>Music Updates</h1>
+        <p>Latest from Sharik Khan Jr & Independent Music Scene</p>
+    </div>
+
+    <div class="container">
+        
+        <a href="../articles/independent-artist-sharik-khan-jr-knowledge-panel-seo-visibility-achalpur-2026.html" class="news-card">
+            <div class="image-box"><img src="https://i.postimg.cc/Mp18XCXJ/sharik-khan-jr-google-knowledge-panel-2026.png"></div>
+            <div class="content-box">
+                <span class="article-category">Digital Identity</span>
+                <h2 class="article-title">Google Knowledge Panel 2026: Sharik Khan Jr Digital Growth</h2>
+                <span class="read-more">Read Full News →</span>
+            </div>
+        </a>
+
+        <a href="../articles/sharik-khan-jr-songs-attention-streaming-platforms-india-2026.html" class="news-card">
+            <div class="image-box"><img src="https://i.postimg.cc/XqkKPMdG/sharik-khan-jr-songs-gaining-attention-streaming-platforms-2026.png"></div>
+            <div class="content-box">
+                <span class="article-category">Music News</span>
+                <h2 class="article-title">Sharik Khan Jr Songs Gaining Attention on Global Platforms</h2>
+                <span class="read-more">Read Full News →</span>
+            </div>
+        </a>
+
+        <a href="../articles/iran-ki-awaz-naat-sharik-khan-jr-aqsa-march-2026-news.html" class="news-card">
+            <div class="image-box"><img src="https://i.postimg.cc/vTVLjjxV/Sharik-khan-jr-new-Hona-Naat-Iran-ki-awaz-Aqsa.jpg"></div>
+            <div class="content-box">
+                <span class="article-category">New Release</span>
+                <h2 class="article-title">Iran Ki Awaz Naat 2026: Official Tribute Release</h2>
+                <span class="read-more">Read Full News →</span>
+            </div>
+        </a>
+
+        <a href="../articles/sharik-khan-jr-new-song.html" class="news-card">
+            <div class="image-box"><img src="https://raw.githubusercontent.com/JRNewsMedia/JRNewsMedia.github.io/main/images/20251023_143435.jpg"></div>
+            <div class="content-box">
+                <span class="article-category">Hit Single</span>
+                <h2 class="article-title">New Hit Song "MERA ATTITUDE" Out Now</h2>
+                <span class="read-more">Read Full News →</span>
+            </div>
+        </a>
+
+    </div>
+
+    <footer class="footer">
+        <a href="../index.html" class="back-home">← BACK TO HOME</a>
+        <p>&copy; 2026 JR News Media Group</p>
+    </footer>
+
+</body>
+</html>
 
