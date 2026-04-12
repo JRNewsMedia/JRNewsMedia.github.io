@@ -1,54 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
        <loc>https://jrnewsmedia.github.io/index.html</loc>
-       <lastmod>2025-10-27T13:55:10+00:00</lastmod>
+       <lastmod>2026-04-12T17:00:00+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>1.0000</priority>
+  </url>
+  <url>
+       <loc>https://jrnewsmedia.github.io/about.html</loc>
+       <lastmod>2026-04-12T17:00:00+00:00</lastmod>
+       <changefreq>monthly</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://jrnewsmedia.github.io/contact.html</loc>
+       <lastmod>2026-04-12T17:00:00+00:00</lastmod>
+       <changefreq>monthly</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://jrnewsmedia.github.io/privacy.html</loc>
+       <lastmod>2026-04-12T17:00:00+00:00</lastmod>
+       <changefreq>monthly</changefreq>
+       <priority>0.5000</priority>
+  </url>
+
+  <url>
+       <loc>https://jrnewsmedia.github.io/local/news.html</loc>
+       <lastmod>2026-04-12T17:00:00+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.9000</priority>
+  </url>
+  <url>
+       <loc>https://jrnewsmedia.github.io/music/music-updates.html</loc>
+       <lastmod>2026-04-12T17:00:00+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.9000</priority>
+  </url>
+  <url>
+       <loc>https://jrnewsmedia.github.io/biography/profile.html</loc>
+       <lastmod>2026-04-12T17:00:00+00:00</lastmod>
+       <changefreq>weekly</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://jrnewsmedia.github.io/politics/governance.html</loc>
+       <lastmod>2026-04-12T17:00:00+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
   <url>
+       <loc>https://jrnewsmedia.github.io/lifestyle/lifestyle.html</loc>
+       <lastmod>2026-04-12T17:00:00+00:00</lastmod>
+       <changefreq>weekly</changefreq>
+       <priority>0.7000</priority>
+  </url>
+  <url>
+       <loc>https://jrnewsmedia.github.io/team/updates.html</loc>
+       <lastmod>2026-04-12T17:00:00+00:00</lastmod>
+       <changefreq>monthly</changefreq>
+       <priority>0.6000</priority>
+  </url>
+
+  <url>
        <loc>https://jrnewsmedia.github.io/local.html</loc>
-       <lastmod>2025-10-27T13:55:10+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+       <lastmod>2026-04-12T17:00:00+00:00</lastmod>
+       <changefreq>never</changefreq>
+       <priority>0.1000</priority>
   </url>
   <url>
        <loc>https://jrnewsmedia.github.io/sports.html</loc>
-       <lastmod>2025-10-27T13:55:10+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+       <lastmod>2026-04-12T17:00:00+00:00</lastmod>
+       <changefreq>never</changefreq>
+       <priority>0.1000</priority>
   </url>
   <url>
        <loc>https://jrnewsmedia.github.io/entertainment.html</loc>
-       <lastmod>2025-10-27T13:55:10+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+       <lastmod>2026-04-12T17:00:00+00:00</lastmod>
+       <changefreq>never</changefreq>
+       <priority>0.1000</priority>
   </url>
-  <url>
-       <loc>https://jrnewsmedia.github.io/articles/achalpur-chunav-ghosna-jald.html</loc>
-       <lastmod>2025-10-27T13:55:10+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
-  </url>
-  <url>
-       <loc>https://jrnewsmedia.github.io/articles/umeedwar-taiyari.html</loc>
-       <lastmod>2025-10-27T13:55:10+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
-  </url>
-  <url>
-    
-    <loc>https://jrnewsmedia.github.io/articles/mansi-srivastava-bday-message-jr-news.html</loc>
-    <lastmod>2025-11-03T13:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-</url>
-<url>
-    <loc>https://jrnewsmedia.github.io/articles/sharik-khan-jr-new-song.html</loc>
-    <lastmod>2025-11-03T13:15:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-</url>
+
+  <url><loc>https://jrnewsmedia.github.io/articles/achalpur-chunav-ghosna-jald.html</loc><lastmod>2026-04-12T17:00:00+00:00</lastmod><priority>0.8</priority></url>
+  <url><loc>https://jrnewsmedia.github.io/articles/umeedwar-taiyari.html</loc><lastmod>2026-04-12T17:00:00+00:00</lastmod><priority>0.8</priority></url>
+  <url><loc>https://jrnewsmedia.github.io/articles/mansi-srivastava-bday-message-jr-news.html</loc><lastmod>2026-04-12T17:00:00+00:00</lastmod><priority>0.8</priority></url>
+  <url><loc>https://jrnewsmedia.github.io/articles/sharik-khan-jr-new-song.html</loc><lastmod>2026-04-12T17:00:00+00:00</lastmod><priority>0.8</priority></url>
+  <url><loc>https://jrnewsmedia.github.io/articles/sharik-khan-jr-comeback-news.html</loc><lastmod>2026-04-12T17:00:00+00:00</lastmod><priority>0.8</priority></url>
+  <url><loc>https://jrnewsmedia.github.io/articles/shipra-kasana-supports-sharik-khan-jr-english.html</loc><lastmod>2026-04-12T17:00:00+00:00</lastmod><priority>0.8</priority></url>
+  <url><loc>https://jrnewsmedia.github.io/articles/mahee-sharik-jrnews.html</loc><lastmod>2026-04-12T17:00:00+00:00</lastmod><priority>0.8</priority></url>
+  <url><loc>https://jrnewsmedia.github.io/articles/sharik-khan-jr-shakir-dada-music-news.html</loc><lastmod>2026-04-12T17:00:00+00:00</lastmod><priority>0.8</priority></url>
+  <url><loc>https://jrnewsmedia.github.io/articles/sharik-khan-jr-official-biography-verified-digital-presence.html</loc><lastmod>2026-04-12T17:00:00+00:00</lastmod><priority>0.8</priority></url>
+  <url><loc>https://jrnewsmedia.github.io/articles/sharik-khan-jr-independent-music-artist.html</loc><lastmod>2026-04-12T17:00:00+00:00</lastmod><priority>0.8</priority></url>
+  <url><loc>https://jrnewsmedia.github.io/articles/republic-day-2026-sharik-khan-jr-tribute.html</loc><lastmod>2026-04-12T17:00:00+00:00</lastmod><priority>0.8</priority></url>
+  <url><loc>https://jrnewsmedia.github.io/articles/adil-mirza-assigned-editorial-role-sharik-khan-jr.html</loc><lastmod>2026-04-12T17:00:00+00:00</lastmod><priority>0.8</priority></url>
+  <url><loc>https://jrnewsmedia.github.io/articles/sharik-khan-jr-holi-2026-celebration.html</loc><lastmod>2026-04-12T17:00:00+00:00</lastmod><priority>0.8</priority></url>
+  <url><loc>https://jrnewsmedia.github.io/articles/sharik-khan-jr-youtube-10k.html</loc><lastmod>2026-04-12T17:00:00+00:00</lastmod><priority>0.8</priority></url>
+  <url><loc>https://jrnewsmedia.github.io/articles/sharik-khan-jr-iran-zindabad-rahega-sufi-qawwali.html</loc><lastmod>2026-04-12T17:00:00+00:00</lastmod><priority>0.8</priority></url>
+  <url><loc>https://jrnewsmedia.github.io/articles/sharik-khan-jr-independent-music-artist-achalpur.html</loc><lastmod>2026-04-12T17:00:00+00:00</lastmod><priority>0.8</priority></url>
+  <url><loc>https://jrnewsmedia.github.io/articles/iran-ka-nara-palestine-ka-nara-sharik-khan-jr-noha-2026.html</loc><lastmod>2026-04-12T17:00:00+00:00</lastmod><priority>0.8</priority></url>
+  <url><loc>https://jrnewsmedia.github.io/articles/iran-ki-awaz-naat-sharik-khan-jr-aqsa-march-2026-news.html</loc><lastmod>2026-04-12T17:00:00+00:00</lastmod><priority>0.8</priority></url>
+  <url><loc>https://jrnewsmedia.github.io/articles/sharik-khan-jr-wikidata-profile-news.html</loc><lastmod>2026-04-12T17:00:00+00:00</lastmod><priority>0.8</priority></url>
+  <url><loc>https://jrnewsmedia.github.io/articles/sharik-khan-jr-digital-growth-wikidata-news-2026.html</loc><lastmod>2026-04-12T17:00:00+00:00</lastmod><priority>0.8</priority></url>
+  <url><loc>https://jrnewsmedia.github.io/articles/sharik-khan-jr-google-knowledge-panel-importance-2026.html</loc><lastmod>2026-04-12T17:00:00+00:00</lastmod><priority>0.8</priority></url>
+  <url><loc>https://jrnewsmedia.github.io/articles/sharik-khan-jr-medam-maya-mumbai-song-celebration-2026.html</loc><lastmod>2026-04-12T17:00:00+00:00</lastmod><priority>0.8</priority></url>
+  <url><loc>https://jrnewsmedia.github.io/articles/sharik-khan-jr-medam-maya-collaboration-rumours-2026.html</loc><lastmod>2026-04-12T17:00:00+00:00</lastmod><priority>0.8</priority></url>
+  <url><loc>https://jrnewsmedia.github.io/articles/independent-music-india-2026-digital-growth-sharik-khan-jr.html</loc><lastmod>2026-04-12T17:00:00+00:00</lastmod><priority>0.8</priority></url>
+  <url><loc>https://jrnewsmedia.github.io/articles/google-knowledge-panel-artists-2026-sharik-khan-jr-digital-identity.html</loc><lastmod>2026-04-12T17:00:00+00:00</lastmod><priority>0.8</priority></url>
+  <url><loc>https://jrnewsmedia.github.io/articles/sharik-khan-jr-songs-attention-streaming-platforms-india-2026.html</loc><lastmod>2026-04-12T17:00:00+00:00</lastmod><priority>0.8</priority></url>
+  <url><loc>https://jrnewsmedia.github.io/articles/independent-artist-sharik-khan-jr-knowledge-panel-seo-visibility-achalpur-2026.html</loc><lastmod>2026-04-12T17:00:00+00:00</lastmod><priority>0.8</priority></url>
+
 </urlset>
