@@ -3,755 +3,440 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JR News Media - Local News from Achalpur & Amravati</title>
-
-    <meta name="google-site-verification" content="ccqE1t0uTmstDgM8-Ej2N4_9-yMoJIl1v0Hqo3g4SLw" />
-
-    <meta name="description" content="Taaza khabar, local reporting, aur exclusive stories Achalpur, Amravati, aur Maharashtra se. Get the latest news, politics, sports, and entertainment updates from JR News Media.">
-
+    <title>JR News Media | Professional Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* CSS Cleaned and Optimized for Desktop/Mobile */
+        :root {
+            --primary-red: #C62828;
+            --deep-black: #121212;
+            --white: #ffffff;
+            --bg-gray: #f5f7f9;
+        }
+
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: #f0f0f0; 
+            background-color: var(--bg-gray);
             color: #333;
-            line-height: 1.5;
         }
 
-        /* Header (News Logo & Nav) */
-        .header {
-            background-color: #D32F2F; /* News Red */
-            color: white;
-            padding: 15px 0;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        /* --- STICKY HEADER --- */
+        .main-header {
+            background: var(--white);
+            padding: 15px 20px;
+            border-bottom: 3px solid var(--primary-red);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
 
-        .logo {
-            font-size: 32px; 
-            font-weight: 900; 
-            margin: 0;
+        .logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: 900;
+            color: var(--deep-black);
+            text-decoration: none;
+            text-transform: uppercase;
         }
 
-        /* Navbar: Corrected Structure */
+        .logo-text span { color: var(--primary-red); }
+
+        .menu-btn { font-size: 24px; background: none; border: none; cursor: pointer; color: var(--deep-black); }
+
+        /* --- NAVIGATION --- */
         .navbar {
-            background-color: #B71C1C; 
-            overflow: hidden;
+            background: #fff;
+            border-bottom: 1px solid #ddd;
             text-align: center;
+            padding: 8px 0;
+            overflow-x: auto;
+            white-space: nowrap;
+            display: flex;
+            justify-content: center;
+            gap: 5px;
         }
 
         .navbar a {
-            display: inline-block;
-            color: white;
-            padding: 14px 20px;
+            color: #444;
             text-decoration: none;
-            font-size: 16px;
-            font-weight: bold;
-            transition: background-color 0.3s;
+            padding: 8px 12px;
+            font-size: 11px;
+            font-weight: 800;
+            text-transform: uppercase;
+            border-radius: 4px;
+            transition: 0.3s;
         }
 
-        .navbar a:hover {
-            background-color: #E57373;
-        }
+        .navbar a:hover { background-color: var(--primary-red); color: white; }
 
-        /* Main Content Area (Layout Fix) */
+        /* --- CONTENT AREA --- */
         .container {
-            width: 90%;
-            max-width: 1200px; 
+            max-width: 800px; 
             margin: 20px auto;
-            overflow: hidden; /* Clear floats */
+            padding: 0 15px;
         }
 
-        .main-content {
-            float: left;
-            width: 65%;
-            box-sizing: border-box;
-            padding-right: 20px;
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            text-transform: uppercase;
+            border-left: 4px solid var(--primary-red);
+            padding-left: 10px;
+            margin-bottom: 20px;
         }
 
-        .sidebar {
-            float: right;
-            width: 35%;
-            background: #ffffff; 
-            padding: 20px;
-            box-sizing: border-box;
-            border-left: 1px solid #ddd;
-            border-radius: 5px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-        }
-
-        /* Category Header Style */
-        .category-header {
-            background-color: #fff;
-            padding: 10px 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            border-left: 5px solid #D32F2F; /* Red accent */
+        /* --- CLICKABLE CARD DESIGN --- */
+        .news-card {
+            background: var(--white);
             margin-bottom: 25px;
-        }
-        .category-header h2 {
-            margin: 0;
-            color: #D32F2F;
-            font-size: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            cursor: pointer;
+            transition: transform 0.2s;
+            display: block;
+            text-decoration: none;
+            color: inherit;
         }
 
+        .news-card:hover { transform: translateY(-3px); }
 
-        /* News Article Design - FINAL */
-        .news-article {
-            background: #fff;
-            padding: 25px; 
-            margin-bottom: 25px; 
-            border-radius: 8px; 
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
-            border-left: 5px solid #D32F2F; 
+        .image-box img { width: 100%; display: block; height: auto; }
+
+        .content-box { padding: 20px; }
+
+        .article-category { 
+            color: var(--primary-red); 
+            font-size: 10px; 
+            font-weight: 800; 
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            display: block;
         }
 
         .article-title {
-            color: #1a1a1a; 
-            font-size: 24px;
-            font-weight: 700;
-            margin-top: 0;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 19px;
+            margin: 0 0 10px 0;
             line-height: 1.3;
-        }
-        
-        /* Read More Button Design - FINAL FIX (Red Button Style) */
-        .read-more {
-            background-color: #D32F2F; /* Red button background */
-            color: white; /* White text */
-            padding: 8px 15px; /* Padding for button feel */
-            text-decoration: none;
-            font-weight: bold;
-            display: inline-block; /* FIX: Makes it a proper visible button */
-            margin-top: 15px;
-            border-radius: 5px; /* Rounded corners */
-            transition: background-color 0.3s ease;
-            font-size: 14px;
-        }
-        
-        .read-more:hover {
-            background-color: #E57373; 
-            text-decoration: none;
+            color: var(--deep-black);
         }
 
-        .meta {
-            font-size: 13px;
-            color: #777;
-            margin-bottom: 15px;
-            font-style: italic;
+        .meta-info { font-size: 11px; color: #888; margin-bottom: 10px; display: block; }
+
+        .read-more-link {
+            color: var(--primary-red);
+            font-weight: 800;
+            font-size: 12px;
+            text-transform: uppercase;
         }
 
-        .article-image {
-            width: 100%;
-            height: auto;
-            margin-bottom: 15px;
-            border-radius: 4px;
-        }
-
-        /* Sidebar Trending List Style */
-        .sidebar h3 {
-            color: #D32F2F;
-            border-bottom: 2px solid #D32F2F;
-            padding-bottom: 5px;
-        }
-        .sidebar li a {
-            color: #333;
-            text-decoration: none;
-        }
-        .sidebar li a:hover {
-            color: #D32F2F;
-        }
-
-        /* New Tip Us Box Style */
-        .tip-box {
-            background-color: #f5f5f5;
-            padding: 15px;
-            border-radius: 8px;
-            border: 1px solid #ddd;
-            text-align: center;
-            margin-top: 30px;
-        }
-        .tip-button {
-            background-color: #2ECC71; /* Green Button */
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            font-weight: bold;
-            display: block;
-            margin-top: 10px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        .tip-button:hover {
-            background-color: #27AE60;
-        }
-        
-        /* Footer */
+        /* --- FOOTER --- */
         .footer {
-            background-color: #333;
-            color: white;
+            background: var(--deep-black);
+            color: #fff;
+            padding: 40px 20px;
             text-align: center;
-            padding: 15px 0;
-            margin-top: 30px;
         }
 
-        /* Responsive Design (Mobile Fix) */
-        @media (max-width: 768px) {
-            .container {
-                width: 95%; 
-            }
-            .main-content, .sidebar {
-                width: 100%;
-                float: none;
-                padding-right: 0;
-                padding-left: 0;
-                border-left: none;
-            }
-            .sidebar {
-                margin-top: 15px;
-            }
-            .news-article {
-                border-radius: 0; 
-                border-left: none;
-            }
-        }
+        .footer-socials a { color: #ddd; text-decoration: none; margin: 0 10px; font-size: 12px; font-weight: bold; }
+        .footer-info { font-size: 11px; color: #777; border-top: 1px solid #222; padding-top: 20px; margin-top: 20px; }
     </style>
-    <link rel="canonical" href="https://jrnewsmedia.github.io/index.html">
 </head>
 <body>
 
-    <header class="header">
-        <h1 class="logo">JR NEWS MEDIA</h1>
-        <p style="font-size: 14px; margin: 0;">*Taaza Khabar, Desi Zabaan Mein*</p>
+    <header class="main-header">
+        <a href="index.html" class="logo-text">JR NEWS <span>MEDIA</span></a>
+        <button class="menu-btn">☰</button>
     </header>
-    
+
     <nav class="navbar">
         <a href="index.html">HOME</a>
-        <a href="local.html">LOCAL (Amravati)</a>
-        <a href="sports.html">SPORTS</a>
-        <a href="local.html">POLITICS</a>
-        <a href="entertainment.html">ENTERTAINMENT</a>
+        <a href="music/music-updates.html">MUSIC</a>
+        <a href="biography/profile.html">BIOGRAPHY</a>
+        <a href="local/news.html">LOCAL NEWS</a>
+        <a href="politics/governance.html">POLITICS</a>
+        <a href="lifestyle/lifestyle.html">LIFESTYLE</a>
     </nav>
-        
+
     <div class="container">
-        
-        <section class="main-content">
-            
-            <div class="category-header">
-                <h2>⭐ FEATURED NEWS</h2>
+        <h2 class="section-title">Latest Headlines</h2>
+
+        <a href="music/sharik-khan-jr-knowledge-panel-2026.html" class="news-card">
+            <div class="image-box"><img src="https://i.postimg.cc/Mp18XCXJ/sharik-khan-jr-google-knowledge-panel-2026.png"></div>
+            <div class="content-box">
+                <span class="article-category">Digital Identity</span>
+                <h2 class="article-title">Google Knowledge Panel Strengthens Digital Identity of Sharik Khan Jr in 2026</h2>
+                <span class="meta-info">April 11, 2026 | Music Desk</span>
+                <span class="read-more-link">Read Full Story →</span>
             </div>
-
-
-
-            <article class="news-article">
-    <h2 class="article-title">Google Knowledge Panel Strengthens Digital Identity of Sharik Khan Jr in 2026</h2>
-    
-    <p class="meta">By JR News Reporter | April 11, 2026 | Music & Digital Growth</p>
-    
-    <img src="https://i.postimg.cc/Mp18XCXJ/sharik-khan-jr-google-knowledge-panel-2026.png" 
-    alt="Sharik Khan Jr Google Knowledge Panel 2026 digital identity SEO visibility independent artist India" 
-    class="article-image">
-    
-    <p>
-    In 2026, independent artist Sharik Khan Jr is gaining strong recognition as his Google Knowledge Panel strengthens his digital identity. With growing search visibility and structured online presence, his profile is becoming more authoritative across platforms.
-    </p>
-    
-    <a href="articles/independent-artist-sharik-khan-jr-knowledge-panel-seo-visibility-achalpur-2026.html" class="read-more">READ FULL ARTICLE...</a>
-            </article>
-
-            <article class="news-article">
-    <h2 class="article-title">Sharik Khan Jr Songs Gain Attention Across Streaming Platforms in 2026</h2>
-    
-    <p class="meta">By JR News Reporter | April 9, 2026 | Music & Entertainment</p>
-    
-    <img src="https://i.postimg.cc/XqkKPMdG/sharik-khan-jr-songs-gaining-attention-streaming-platforms-2026.png" 
-    alt="Sharik Khan Jr songs gaining attention streaming platforms 2026 independent music artist India" 
-    class="article-image">
-    
-    <p>
-    Independent music artist Sharik Khan Jr is gaining attention across streaming platforms in 2026. His consistent releases and growing digital presence are helping him reach wider audiences and strengthen his identity in the independent music scene.
-    </p>
-    
-    <a href="articles/sharik-khan-jr-songs-attention-streaming-platforms-india-2026.html" class="read-more">
-    READ FULL ARTICLE...
-    </a>
-            </article>
-
-            <article class="news-article">
-    <h2 class="article-title">How Google Knowledge Panel is Shaping Artist Identity in 2026: The Digital Growth of Sharik Khan Jr</h2>
-    <p class="meta">By JR News Reporter | April 8, 2026 | Music & Digital Identity</p>
-    <img src="https://i.postimg.cc/Y2xFMh7C/sharik-khan-jr-google-knowledge-panel-2026-thumbnail.png" alt="Sharik Khan Jr Google Knowledge Panel 2026 digital identity independent music artist India" class="article-image">
-    <p>Google Knowledge Panel is becoming a powerful tool for independent artists in 2026. It helps build verified identity, improve search visibility, and connect audiences with authentic information across platforms.</p>
-    <a href="articles/google-knowledge-panel-artists-2026-sharik-khan-jr-digital-identity.html" class="read-more">READ FULL ARTICLE...</a>
-            </article>
-
-            <article class="news-article">
-    <h2 class="article-title">The Rise of Independent Music Artists in India 2026: Digital Growth Changing the Industry</h2>
-    <p class="meta">By JR News Reporter | April 7, 2026 | Music & Digital Growth</p>
-    <img src="https://i.postimg.cc/PxJwqQ8W/Sharik-khan-jr-google-knowledge-panel.png" alt="Independent music growth in India 2026 and digital rise of artists like Sharik Khan Jr" class="article-image">
-    <p>India’s music industry is witnessing a major shift in 2026 as independent artists rise through digital platforms. With increasing online visibility and audience engagement, artists like Sharik Khan Jr are gaining recognition without traditional labels.</p>
-    <a href="articles/independent-music-india-2026-digital-growth-sharik-khan-jr.html" class="read-more">READ FULL ARTICLE...</a>
-            </article>
-
-            <article class="news-article">
-    <h2 class="article-title">
-        Sharik Khan Jr and Medam Maya Collaboration Rumours Grow Stronger After Mumbai Appearance
-    </h2>
-
-    <p class="meta">
-        By JR News Media | April 6, 2026 | Music News
-    </p>
-
-    <img src="https://i.postimg.cc/66gZ6fgs/Sharik-khan-jr-music-artists-and-Medam-maya.png" 
-    alt="Sharik Khan Jr and Medam Maya spotted together in Mumbai 2026 collaboration rumours" 
-    class="article-image">
-
-    <p>
-        After being spotted together in Mumbai, speculation around a possible collaboration between Sharik Khan Jr and Medam Maya is growing stronger, with fans expecting a major music announcement soon.
-    </p>
-
-    <a href="https://jrnewsmedia.github.io/articles/sharik-khan-jr-medam-maya-collaboration-rumours-2026.html" 
-    class="read-more">
-        READ FULL ARTICLE...
-    </a>
-            </article>
-
-            <article class="news-article">
-    <h2 class="article-title">
-        Sharik Khan Jr Spotted with Medam Maya in Mumbai, Sparks New Song Celebration Buzz 2026
-    </h2>
-
-    <p class="meta">
-        By JR News Media | April 5, 2026 | Music News
-    </p>
-
-    <img src="https://i.postimg.cc/66gZ6fgs/Sharik-khan-jr-music-artists-and-Medam-maya.png" 
-    alt="Sharik Khan Jr and Medam Maya spotted together in Mumbai 2026 possible music collaboration" 
-    class="article-image">
-
-    <p>
-        Independent artist Sharik Khan Jr was recently seen with Medam Maya in Mumbai, creating strong buzz about a possible new song celebration or upcoming collaboration in 2026.
-    </p>
-
-    <a href="https://jrnewsmedia.github.io/articles/sharik-khan-jr-medam-maya-mumbai-song-celebration-2026.html" 
-    class="read-more">
-        READ FULL ARTICLE...
-    </a>
-            </article>
-
-            <article class="news-article">
-    <h2 class="article-title">
-        Independent Artists Ke Liye Google Knowledge Panel Ka Importance – 2026 Mein Digital Identity Ka Future
-    </h2>
-
-    <p class="meta">
-        By JR News Reporter | April 4, 2026 | Digital Growth
-    </p>
-
-    <img src="https://i.postimg.cc/fyrn6JgC/Sharik-khan-jr-musical-artist.png" 
-         alt="Sharik Khan Jr Google Knowledge Panel digital identity article thumbnail" 
-         class="article-image">
-
-    <p>
-        Independent artists ke liye digital identity aaj ke time me sabse important factor ban chuki hai. 
-        Google Knowledge Panel ek powerful tool hai jo artists ko verified identity, strong branding aur 
-        search visibility provide karta hai. 2026 me digital growth ke liye ye ek game-changing feature mana ja raha hai.
-    </p>
-
-    <a href="articles/sharik-khan-jr-google-knowledge-panel-importance-2026.html" 
-       class="read-more">
-       READ FULL ARTICLE...
-    </a>
-            </article>
-
-            <article class="news-article">
-  <h2 class="article-title">Sharik Khan Jr Strengthens Digital Identity with Wikidata and Media Growth</h2>
-  
-  <p class="meta">By JR News Media | April 3, 2026 | Music & Digital News</p>
-  
-  <img src="https://i.postimg.cc/9fRP2YjS/sharik-khan-jr-motorcycle-photoshoot-2026.png" 
-  alt="Sharik Khan Jr official artist motorcycle photo with JR logo 2026" 
-  class="article-image">
-  
-  <p>
-  Achalpur-based independent artist Sharik Khan Jr is rapidly building a strong digital presence with his verified Wikidata profile, official website integration, and growing media coverage. His online identity is becoming more structured and recognized across platforms.
-  </p>
-  
-  <a href="https://jrnewsmedia.github.io/articles/sharik-khan-jr-digital-growth-wikidata-news-2026.html" class="read-more">
-  READ FULL ARTICLE...
-  </a>
-            </article>
-
-            <article class="news-article">
-    <h2 class="article-title">
-        Sharik Khan Jr Strengthens Digital Identity with Official Wikidata Profile
-    </h2>
-
-    <p class="meta">
-        By JR News Media | April 2, 2026 | Entertainment
-    </p>
-
-    <img src="https://i.postimg.cc/h4QMQ9Hc/sharik-khan-jr-artist-2026.png" 
-    alt="Sharik Khan Jr Indian music artist rapper from Achalpur Maharashtra" 
-    class="article-image">
-
-    <p>
-        Indian independent music artist Sharik Khan Jr is expanding his digital presence through verified platforms like Wikidata. This move helps improve search visibility, strengthen artist identity, and connect his music across multiple platforms.
-    </p>
-
-    <a href="articles/sharik-khan-jr-wikidata-profile-news.html" class="read-more">
-        READ FULL ARTICLE...
-    </a>
-            </article>
-
-            <article class="news-article">
-
-    <h2 class="article-title">
-        Iran Ki Awaz Naat 2026: Sharik Khan Jr Releases Emotional Aqsa Tribute Song
-    </h2>
-
-    <p class="meta">
-        By JR News Desk | March 2026 | Music
-    </p>
-
-    <img src="https://i.postimg.cc/vTVLjjxV/Sharik-khan-jr-new-Hona-Naat-Iran-ki-awaz-Aqsa.jpg" 
-    alt="Iran Ki Awaz Naat 2026 by Sharik Khan Jr Masjid e Aqsa Palestine emotional Islamic song poster" 
-    class="article-image">
-
-    <p>
-        Independent music artist Sharik Khan Jr has released a powerful and emotional naat titled 
-        “Iran Ki Awaz – Mere Aqsa Teri Azmat Pe Dil Qurban Hai.” The release highlights the spiritual 
-        importance of Masjid e Aqsa and delivers a strong message of unity, faith and devotion. 
-        The video is gaining attention across YouTube and digital platforms.
-    </p>
-
-    <a href="https://jrnewsmedia.github.io/articles/iran-ki-awaz-naat-sharik-khan-jr-aqsa-march-2026-news.html" 
-    class="read-more">
-        READ FULL ARTICLE...
-    </a>
-
-</article>
-            
-            <article class="news-article">
-    <h2 class="article-title">Iran Ka Nara Palestine Ka Nara – Sharik Khan Jr Releases Emotional Noha 2026</h2>
-    
-    <p class="meta">By JR News Desk | March 2026 | Music & Global</p>
-
-    <img src="https://i.postimg.cc/JhnGJQD8/Iran-Ka-Nara-Hai-Masjid-e-Aqsa-Hamara-Sharik-khan-jr-song.png" 
-    alt="Iran Ka Nara Palestine Ka Nara Noha 2026 by Sharik Khan Jr Masjid e Aqsa Palestine song poster" 
-    class="article-image">
-
-    <p>
-    Independent music artist Sharik Khan Jr has released a powerful and emotional Noha titled “Iran Ka Nara Palestine Ka Nara Masjid e Aqsa Hai Hamara.” The video is gaining attention online for its strong message of unity, faith and connection with global audiences.
-    </p>
-
-    <a href="https://jrnewsmedia.github.io/articles/iran-ka-nara-palestine-ka-nara-sharik-khan-jr-noha-2026.html" class="read-more">
-    READ FULL ARTICLE...
-    </a>
-            </article>
-
-            <article class="news-article">
-    <h2 class="article-title">Independent Music Artist Sharik Khan Jr Expands His Digital Presence From Achalpur</h2>
-    <p class="meta">By JR News Desk | March 2026 | Music & Entertainment</p>
-
-    <img src="https://i.postimg.cc/fkQWprTB/20251105_172339.jpg" 
-    alt="Sharik Khan Jr independent music artist from Achalpur Maharashtra India" 
-    class="article-image">
-
-    <p>
-    Independent music artist Sharik Khan Jr from Achalpur, Maharashtra is gradually gaining attention across digital platforms through his independent music releases and growing online presence. His music is available on global streaming services including YouTube, Spotify and JioSaavn, allowing audiences worldwide to discover his work.
-    </p>
-
-    <a href="https://jrnewsmedia.github.io/articles/sharik-khan-jr-independent-music-artist-achalpur.html" class="read-more">
-    READ FULL ARTICLE...
-    </a>
-</article>
-
-            <article class="news-article">
-
-<h2 class="article-title">
-Achalpur Music Artist Sharik Khan Jr Releases Emotional Sufi Qawwali “Iran Zindabad Rahega”
-</h2>
-
-<p class="meta">
-By JR News Desk | March 2026 | Music
-</p>
-
-<img src="https://assets-news-bcdn.dailyhunt.in/cmd/resize/800x533_75/fetchdata20/images/18/16/19/181619533ceabaddcd7f8058abf671d0d211742c3484fd9e562a7cb3a77e7d83.webp"
-alt="Iran Zindabad Rahega Sufi Qawwali released by Sharik Khan Jr independent music artist from Achalpur Maharashtra"
-class="article-image">
-
-<p>
-Independent music artist Sharik Khan Jr from Achalpur, Maharashtra has released a powerful Sufi Qawwali titled “Iran Zindabad Rahega” on his Official YouTube Artist Channel. The emotional song blends traditional qawwali style with a modern message of faith and resilience.
-</p>
-
-<a href="https://jrnewsmedia.github.io/articles/sharik-khan-jr-iran-zindabad-rahega-sufi-qawwali.html" class="read-more">
-Read Full Article
-</a>
-
-</article>
-
-<article class="news-article">
-<h2 class="article-title">Indian Rap Artist Sharik Khan Jr Reaches 10K Subscribers on Official YouTube Channel</h2>
-<p class="meta">By JR News Desk | March 2026 | Music</p>
-
-<img src="https://i.postimg.cc/zXZGvK3g/Sharik_khan_jr_10k_Family.png" 
-alt="Sharik Khan Jr celebrating 10K subscribers milestone on his official YouTube artist channel" 
-class="article-image">
-
-<p>
-Independent Indian rap artist Sharik Khan Jr has reached a major milestone by completing 
-10,000 subscribers on his official YouTube Artist Channel. The Desi Hip-Hop artist from Achalpur 
-thanked his growing YouTube family for their support and celebrated the achievement by sharing 
-special posters dedicated to his fans.
-</p>
-
-<a href="https://jrnewsmedia.github.io/articles/sharik-khan-jr-youtube-10k.html" class="read-more">
-READ FULL ARTICLE...
-</a>
-</article>
-            
-            
-            <article class="news-article">
-    <h2 class="article-title">Music Artist Sharik Khan Jr Celebrates Holi 2026 with Colors and Festival Wishes</h2>
-    <p class="meta">By JR News Desk | March 2026 | Entertainment</p>
-    <img src="https://i.postimg.cc/66k4JgSw/Sharik-khan-jr-2-march-2026.png" alt="Sharik Khan Jr celebrating Holi 2026 festival with vibrant colors in Achalpur" class="article-image">
-    <p>Independent music artist Sharik Khan Jr celebrated Holi 2026 with friends and supporters, sharing colorful moments and festive energy. During the celebration, Sharik Khan Jr also shared a warm message wishing everyone happiness, positivity and joy on the festival of colors.</p>
-    <a href="https://jrnewsmedia.github.io/articles/sharik-khan-jr-holi-2026-celebration.html" class="read-more">READ FULL ARTICLE...</a>
-            </article>
-            
-<article class="news-article">
-    <h2 class="article-title">
-        Adil Mirza Assigned Editorial Role in Sharik Khan Jr’s Creative Team
-    </h2>
-
-    <p class="meta">
-        By JR News Desk | February 12, 2026 | Team Update
-    </p>
-
-    <img 
-        src="https://i.postimg.cc/59L7ftBQ/Screenshot-2026-0212-211839.jpg" 
-        alt="Adil Mirza joins Sharik Khan Jr creative team as editor" 
-        class="article-image"
-    >
-
-    <p>
-        Sharik Khan Jr strengthens his creative operations by assigning editorial responsibilities
-        to Adil Mirza from Paratwada, marking an important team expansion confirmed on February 12.
-    </p>
-
-    <a 
-        href="https://jrnewsmedia.github.io/articles/adil-mirza-assigned-editorial-role-sharik-khan-jr.html" 
-        class="read-more"
-    >
-        READ FULL ARTICLE...
-    </a>
-</article>
-            
-<article class="news-article">
-    <h2 class="article-title">
-        Republic Day 2026: Indian Artist Sharik Khan Jr Pays Tribute to the Nation
-    </h2>
-
-    <p class="meta">
-        By News Desk, JR News Media | January 26, 2026 | National / Culture
-    </p>
-
-    <img 
-        src="https://i.postimg.cc/br8s9Fv2/Sharik_khan_jr_26_January.png" 
-        alt="Republic Day 2026 tribute poster by Indian artist Sharik Khan Jr"
-        class="article-image"
-    >
-
-    <p>
-        On the occasion of India’s 77th Republic Day, Indian artist Sharik Khan Jr shared a
-        heartfelt tribute honoring the Constitution of India and remembering the sacrifices
-        of the nation’s martyrs.
-    </p>
-
-    <a 
-        href="https://jrnewsmedia.github.io/articles/republic-day-2026-sharik-khan-jr-tribute.html" 
-        class="read-more"
-    >
-        READ FULL ARTICLE...
-    </a>
-</article>
-            
-            
-<article class="news-article">
-    <h2 class="article-title">
-        Sharik Khan Jr: A Rising Independent Music Artist Making Waves Across Digital Platforms
-    </h2>
-
-    <p class="meta">
-        By JR News Desk | 2025 | Entertainment
-    </p>
-
-    <img 
-        src="https://raw.githubusercontent.com/JRNewsMedia/JRNewsMedia.github.io/refs/heads/main/images/Sharik%20khan%20jr%20music%20artists%20achalpur.png" 
-        alt="Sharik Khan Jr Independent Music Artist from Achalpur"
-        class="article-image"
-        loading="lazy"
-    >
-
-    <p>
-        Indian independent music scene is witnessing a new wave of creative talent, and among the rising names is Sharik Khan Jr. 
-        Known for his originality, consistency, and digital presence, he continues to build a strong identity across major music platforms.
-    </p>
-
-    <a 
-        href="https://jrnewsmedia.github.io/articles/sharik-khan-jr-independent-music-artist.html" 
-        class="read-more"
-    >
-        READ FULL ARTICLE...
-    </a>
-</article>
-
-
-<article class="news-article">
-    <h2 class="article-title">
-        Sharik Khan Jr: Official Biography, Career, Music Platforms & Verified Digital Identity
-    </h2>
-
-    <p class="meta">
-        By JR News Media | January 11, 2026 | Celebrity Biography
-    </p>
-
-    <img 
-        src="https://raw.githubusercontent.com/JRNewsMedia/JRNewsMedia.github.io/refs/heads/main/images/Sharik%20khan%20jr.png" 
-        alt="Sharik Khan Jr official poster highlighting his verified digital presence, music career and biography." 
-        class="article-image"
-    >
-
-    <p>
-        Indian independent music artist, director and actor Sharik Khan Jr strengthens his verified digital identity with an official biography covering his career journey, music platforms and public presence.
-    </p>
-
-    <a 
-        href="https://jrnewsmedia.github.io/articles/sharik-khan-jr-official-biography-verified-digital-presence.html" 
-        class="read-more"
-    >
-        READ FULL ARTICLE...
-    </a>
-</article>
-            
-        
-<article class="news-article">
-    <h2 class="article-title">
-        Sharik Khan Jr Releases Four Songs Dedicated to Shakir Dada
-    </h2>
-
-    <p class="meta">
-        By JR News Desk | January 2026 | Music News
-    </p>
-
-    <img 
-        src="https://m.media-amazon.com/images/I/41PX553WtjL._SX354_SY354_BL0_QL100__UXNaN_FMjpg_QL85_.jpg" 
-        alt="Sharik Khan Jr official music poster for Shakir Dada song series." 
-        class="article-image"
-    >
-
-    <p>
-        Independent music artist Sharik Khan Jr unveils a powerful series of four official songs dedicated to Shakir Dada. 
-        The songs are now streaming on all major digital music platforms worldwide.
-    </p>
-
-    <a 
-        href="https://jrnewsmedia.github.io/articles/sharik-khan-jr-shakir-dada-music-news.html" 
-        class="read-more"
-    >
-        READ FULL ARTICLE...
-    </a>
-</article>            
-            
-<article class="news-article">
-    <h2 class="article-title">Digital Queen Mahee Pande Sends Special Video Wish to Sharik khan jr, Fuels Collaboration Rumours</h2>
-    <p class="meta">By Neha Naaz | November 11, 2025 | Celebrity News</p>
-    <img src="https://github.com/Sharikkhanjr/Sharik-khan-jr-birthday-biography-/raw/main/images/Mahee%20pande.jpg" alt="Fashion and lifestyle digital creator Mahee Pande in a studio setting." class="article-image">
-    <p>Digital sensation Mahee Pande sends a heartfelt video message to actor and producer Sharik khan jr, extending best wishes for his upcoming projects and the JR Group in Achalpur.</p>
-    <a href="https://jrnewsmedia.github.io/articles/mahee-sharik-jrnews.html" class="read-more">READ FULL ARTICLE...</a>
-</article>
-            
-        <article class="news-article">
-    <h2 class="article-title">Bollywood Actress Shipra Kasana Backs Sharik khan jr Group</h2>
-    <p class="meta">By JR News Desk | November 9, 2025 | Entertainment</p>
-    <img src="https://raw.githubusercontent.com/Sharikkhanjr/Sharik-khan-jr-birthday-biography-/main/images/Shipra%20Kasana.jpg" alt="Bollywood Actress Shipra Kasana shows support for Sharik khan jr" class="article-image">
-    <p>In a major boost for local talent, Bollywood star Shipra Kasana sends a viral video message urging the people of Achalpur-Paratwada to lend full support to local artist Sharik khan jr and his group.</p>
-    <a href="https://jrnewsmedia.github.io/articles/shipra-kasana-supports-sharik-khan-jr-english.html" class="read-more">READ FULL ARTICLE...</a>
-</article>
-            
-<article class="news-article">
-    <h2 class="article-title">ब्रेकिंग न्यूज़: Sharik khan jr का वायरल 'Achalpur Anthem' हुआ री-रिलीज़, फैंस में खुशी की लहर!</h2>
-    
-    <p class="meta">By JR News Reporter | November 8, 2025 | Regional Music</p>
-    
-    <img src="https://raw.githubusercontent.com/JRNewsMedia/JRNewsMedia.github.io/refs/heads/main/images/Are%20kya%20bolti%20Meri%20Achalpur%20Ki%20Public.jpeg" 
-         alt="Sharik khan jr Re-Released Achalpur Anthem Poster" 
-         class="article-image">
-         
-    <p>संगीत की दुनिया से बड़ी खबर! सिंगर Sharik khan jr ने तकनीकी कारणों से हटने के बाद, अपना चार्टबस्टर गाना 'Are Kya Bolte Meri Achalpur Ki Public' को फिर से सभी स्ट्रीमिंग प्लेटफॉर्म्स पर जारी कर दिया है। पूरी कहानी जानें।</p>
-    
-    <a href="articles/sharik-khan-jr-comeback-news.html" class="read-more">READ FULL ARTICLE...</a>
-</article>
-          
-<article class="news-article">
-    <h2 class="article-title">इंडस्ट्री में हलचल! मशहूर टीवी अभिनेत्री मानसी श्रीवास्तव ने किसे भेजा विशेष बर्थडे वीडियो संदेश?</h2>
-    <p class="meta">By JR News Reporter | November 3, 2025 | Entertainment</p>
-    <img src="https://raw.githubusercontent.com/Sharikkhanjr/Sharik-khan-jr-birthday-biography-/refs/heads/main/images/Mansi%20Srivastava%20birthday%20wish.jpg" alt="मानसी श्रीवास्तव का बर्थडे संदेश" class="article-image">
-    <p>टेलीविजन की जानीमानी अभिनेत्री मानसी श्रीवास्तव ने संगीत पर्सनालिटी शारिक खान जेआर को जन्मदिन पर एक खास वीडियो संदेश भेजा, जिसे सोशल मीडिया पर खूब सराहा जा रहा है। जानें इस हार्दिक बधाई का पूरा सफर।</p>
-    <a href="articles/mansi-srivastava-bday-message-jr-news.html" class="read-more">READ FULL ARTICLE...</a>
-</article>
-            
-            <article class="news-article">
-                <h2 class="article-title">Achalpur Nagar Nigam Chunav ki Ghosna Jald: December 2025 Ya January 2026 Mein Sambhav</h2>
-                <p class="meta">By JR News Reporter | October 27, 2025 | Local Politics</p>
-                <img src="images/image-3.png" alt="Achalpur Nagar Nigam Building Chunav Image" class="article-image">
-                <p>Achalpur Nagar Nigam Chunav ki ghoshna jald hone ki sambhavna hai. Sarkaari sootron ke mutabik, sthaniya nagar nigam chunav December 2025 ya January 2026 mein ho sakte hain. Is khabar se rajneetik sargarmi badh gayi hai.</p>
-                <a href="articles/achalpur-chunav-ghosna-jald.html" class="read-more">READ FULL ARTICLE...</a>
-            </article>
-
-            <article class="news-article">
-                <h2 class="article-title">Achalpur Chunav: Umeedwaron Ne Taiyaari Shuru Ki, Gupt Meeting Ka Daura Tezz</h2>
-                <p class="meta">By Political Correspondent | October 27, 2025 | Local Politics</p>
-                <img src="images/Achalpur%20Nagar%20Nigam.jpg" alt="Achalpur meeting image" class="article-image"> 
-                <p>Nagar Nigam chunav ki khabar aate hi, Achalpur ke sambhavit umeedwaron ne kshetra mein gupt meeting aur logon se milna shuru kar diya hai. Har party jald se jald apne karyakartaon ko taiyaar karne mein lagi hai.</p>
-                <a href="articles/umeedwar-taiyari.html" class="read-more">READ FULL ARTICLE...</a>
-            </article>
-
-            <article class="news-article">
-  <h2 class="article-title">शारिक खान जेआर का नया धमाका "MERA ATTITUDE"</h2>
-  <p class="meta">By यश वांखड़े | October 29, 2025 | Music News</p>
-  <img src="https://raw.githubusercontent.com/JRNewsMedia/JRNewsMedia.github.io/main/images/20251023_143435.jpg" alt="शारिक खान जेआर" class="article-image">
-  <p>भारतीय इंडिपेंडेंट म्यूजिक की दुनिया में शारिक खान जेआर ने अपनी नई हिट सिंगल "MERA ATTITUDE" के ज़रिए बड़ा नाम कमाया है। यह गाना युवाओं में खूब लोकप्रिय हो रहा है और Spotify, JioSaavn, Boomplay समेत सभी प्रमुख प्लेटफॉर्म्स पर उपलब्ध है।</p>
-  <a href="articles/sharik-khan-jr-new-song.html" class="read-more">READ FULL ARTICLE...</a>
-</article>
-    
-            <article class="news-article" style="text-align: center; border: 2px dashed #3498db; padding: 20px; background-color: #f7f9fc;">
-                <h2 class="article-title" style="color: #3498db; font-size: 24px; margin-top: 0; border-bottom: none;">AGLI KHABAR JALD AA RAHI HAI!</h2>
-                <p style="font-size: 16px; font-weight: bold; color: #333;">TOPIC: Amravati Nagar Nigam Ke Naye Niyam</p>
-            </article>
-
-        </section>
-
-        <aside class="sidebar">
-            <h3>🔥 Trending News</h3>
-            <ul style="list-style: none; padding: 0;">
-                <li style="margin-bottom: 10px; padding-bottom: 5px; border-bottom: 1px dotted #ccc;"><a href="#" style="color: #D32F2F; text-decoration: none; font-weight: bold;">- Amravati Nagar Nigam Ke Naye Niyam Jald</a></li>
-                <li style="margin-bottom: 10px; padding-bottom: 5px; border-bottom: 1px dotted #ccc;"><a href="#" style="color: #333; text-decoration: none;">- Kis Dal Ko Milegi Achalpur Mein Zyada Seat?</a></li>
-                <li style="margin-bottom: 10px;"><a href="#" style="color: #333; text-decoration: none;">- Shehar Mein Paani Ki Killeet Par Taaza Report</a></li>
-            </ul>
-
-            <div class="tip-box">
-                <h3>💬 Aapki Khabar Bhejein!</h3>
-                <p style="font-size: 14px; color: #555;">Agar aapke paas koi local khabar, photo ya video hai, toh humein turant bhejein.</p>
-                <a href="mailto:rasimkhan453@gmail.com?subject=News Tip for JR News Media" class="tip-button">Humein Email Karein</a>
+        </a>
+
+        <a href="music/sharik-khan-jr-songs-attention-streaming-platforms-india-2026.html" class="news-card">
+            <div class="image-box"><img src="https://i.postimg.cc/XqkKPMdG/sharik-khan-jr-songs-gaining-attention-streaming-platforms-2026.png"></div>
+            <div class="content-box">
+                <span class="article-category">Music News</span>
+                <h2 class="article-title">Sharik Khan Jr Songs Gain Attention Across Streaming Platforms in 2026</h2>
+                <span class="meta-info">April 9, 2026 | Music Desk</span>
+                <span class="read-more-link">Read Full Story →</span>
             </div>
-        </aside>  
+        </a>
+
+        <a href="music/google-knowledge-panel-artists-2026-sharik-khan-jr-digital-identity.html" class="news-card">
+            <div class="image-box"><img src="https://i.postimg.cc/Y2xFMh7C/sharik-khan-jr-google-knowledge-panel-2026-thumbnail.png"></div>
+            <div class="content-box">
+                <span class="article-category">Digital Growth</span>
+                <h2 class="article-title">How Google Knowledge Panel is Shaping Artist Identity in 2026</h2>
+                <span class="meta-info">April 8, 2026 | Editorial Desk</span>
+                <span class="read-more-link">Read Full Story →</span>
+            </div>
+        </a>
+
+        <a href="music/independent-music-india-2026-digital-growth-sharik-khan-jr.html" class="news-card">
+            <div class="image-box"><img src="https://i.postimg.cc/PxJwqQ8W/Sharik-khan-jr-google-knowledge-panel.png"></div>
+            <div class="content-box">
+                <span class="article-category">Industry Trends</span>
+                <h2 class="article-title">The Rise of Independent Music Artists in India 2026: Digital Growth</h2>
+                <span class="meta-info">April 7, 2026 | Music News</span>
+                <span class="read-more-link">Read Full Story →</span>
+            </div>
+        </a>
+
+        <a href="lifestyle/sharik-khan-jr-medam-maya-collaboration-rumours-2026.html" class="news-card">
+            <div class="image-box"><img src="https://i.postimg.cc/66gZ6fgs/Sharik-khan-jr-music-artists-and-Medam-maya.png"></div>
+            <div class="content-box">
+                <span class="article-category">Celebrity Rumours</span>
+                <h2 class="article-title">Sharik Khan Jr and Medam Maya Collaboration Rumours Grow Stronger After Mumbai</h2>
+                <span class="meta-info">April 6, 2026 | Lifestyle Desk</span>
+                <span class="read-more-link">Read Full Story →</span>
+            </div>
+        </a>
+
+        <a href="lifestyle/sharik-khan-jr-medam-maya-mumbai-song-celebration-2026.html" class="news-card">
+            <div class="image-box"><img src="https://i.postimg.cc/66gZ6fgs/Sharik-khan-jr-music-artists-and-Medam-maya.png"></div>
+            <div class="content-box">
+                <span class="article-category">Events</span>
+                <h2 class="article-title">Sharik Khan Jr Spotted with Medam Maya in Mumbai, Sparks Celebration</h2>
+                <span class="meta-info">April 5, 2026 | Entertainment</span>
+                <span class="read-more-link">Read Full Story →</span>
+            </div>
+        </a>
+
+        <a href="music/sharik-khan-jr-google-knowledge-panel-importance-2026.html" class="news-card">
+            <div class="image-box"><img src="https://i.postimg.cc/fyrn6JgC/Sharik-khan-jr-musical-artist.png"></div>
+            <div class="content-box">
+                <span class="article-category">Tech News</span>
+                <h2 class="article-title">Independent Artists Ke Liye Google Knowledge Panel Ka Importance 2026</h2>
+                <span class="meta-info">April 4, 2026 | Editorial Desk</span>
+                <span class="read-more-link">Read Full Story →</span>
+            </div>
+        </a>
+
+        <a href="biography/sharik-khan-jr-digital-growth-wikidata-news-2026.html" class="news-card">
+            <div class="image-box"><img src="https://i.postimg.cc/9fRP2YjS/sharik-khan-jr-motorcycle-photoshoot-2026.png"></div>
+            <div class="content-box">
+                <span class="article-category">Digital Growth</span>
+                <h2 class="article-title">Sharik Khan Jr Strengthens Digital Identity with Wikidata and Media Growth</h2>
+                <span class="meta-info">April 3, 2026 | News Desk</span>
+                <span class="read-more-link">Read Full Story →</span>
+            </div>
+        </a>
+
+        <a href="biography/sharik-khan-jr-wikidata-profile-news.html" class="news-card">
+            <div class="image-box"><img src="https://i.postimg.cc/h4QMQ9Hc/sharik-khan-jr-artist-2026.png"></div>
+            <div class="content-box">
+                <span class="article-category">Biography</span>
+                <h2 class="article-title">Sharik Khan Jr Strengthens Digital Identity with Official Wikidata Profile</h2>
+                <span class="meta-info">April 2, 2026 | News Desk</span>
+                <span class="read-more-link">Read Full Story →</span>
+            </div>
+        </a>
+
+        <a href="music/iran-ki-awaz-naat-sharik-khan-jr-aqsa-march-2026-news.html" class="news-card">
+            <div class="image-box"><img src="https://i.postimg.cc/vTVLjjxV/Sharik-khan-jr-new-Hona-Naat-Iran-ki-awaz-Aqsa.jpg"></div>
+            <div class="content-box">
+                <span class="article-category">Music Release</span>
+                <h2 class="article-title">Iran Ki Awaz Naat 2026: Sharik Khan Jr Releases Emotional Aqsa Tribute</h2>
+                <span class="meta-info">March 2026 | Spiritual Music</span>
+                <span class="read-more-link">Read Full Story →</span>
+            </div>
+        </a>
+
+        <a href="music/iran-ka-nara-palestine-ka-nara-sharik-khan-jr-noha-2026.html" class="news-card">
+            <div class="image-box"><img src="https://i.postimg.cc/JhnGJQD8/Iran-Ka-Nara-Hai-Masjid-e-Aqsa-Hamara-Sharik-khan-jr-song.png"></div>
+            <div class="content-box">
+                <span class="article-category">New Release</span>
+                <h2 class="article-title">Iran Ka Nara Palestine Ka Nara – Sharik Khan Jr Releases Emotional Noha 2026</h2>
+                <span class="meta-info">March 2026 | News Desk</span>
+                <span class="read-more-link">Read Full Story →</span>
+            </div>
+        </a>
+
+        <a href="music/sharik-khan-jr-independent-music-artist-achalpur.html" class="news-card">
+            <div class="image-box"><img src="https://i.postimg.cc/fkQWprTB/20251105_172339.jpg"></div>
+            <div class="content-box">
+                <span class="article-category">Artist Profile</span>
+                <h2 class="article-title">Independent Music Artist Sharik Khan Jr Expands Digital Presence</h2>
+                <span class="meta-info">March 2026 | News Desk</span>
+                <span class="read-more-link">Read Full Story →</span>
+            </div>
+        </a>
+
+        <a href="music/sharik-khan-jr-iran-zindabad-rahega-sufi-qawwali.html" class="news-card">
+            <div class="image-box"><img src="https://assets-news-bcdn.dailyhunt.in/cmd/resize/800x533_75/fetchdata20/images/18/16/19/181619533ceabaddcd7f8058abf671d0d211742c3484fd9e562a7cb3a77e7d83.webp"></div>
+            <div class="content-box">
+                <span class="article-category">Sufi Music</span>
+                <h2 class="article-title">Achalpur Music Artist Sharik Khan Jr Releases Emotional Sufi Qawwali</h2>
+                <span class="meta-info">March 2026 | Music Desk</span>
+                <span class="read-more-link">Read Full Story →</span>
+            </div>
+        </a>
+
+        <a href="music/sharik-khan-jr-youtube-10k.html" class="news-card">
+            <div class="image-box"><img src="https://i.postimg.cc/zXZGvK3g/Sharik_khan_jr_10k_Family.png"></div>
+            <div class="content-box">
+                <span class="article-category">Milestone</span>
+                <h2 class="article-title">Indian Rap Artist Sharik Khan Jr Reaches 10K Subscribers on YouTube</h2>
+                <span class="meta-info">March 2026 | News Desk</span>
+                <span class="read-more-link">Read Full Story →</span>
+            </div>
+        </a>
+
+        <a href="lifestyle/sharik-khan-jr-holi-2026-celebration.html" class="news-card">
+            <div class="image-box"><img src="https://i.postimg.cc/66k4JgSw/Sharik-khan-jr-2-march-2026.png"></div>
+            <div class="content-box">
+                <span class="article-category">Culture</span>
+                <h2 class="article-title">Music Artist Sharik Khan Jr Celebrates Holi 2026 with Festival Wishes</h2>
+                <span class="meta-info">March 2026 | Lifestyle</span>
+                <span class="read-more-link">Read Full Story →</span>
+            </div>
+        </a>
+
+        <a href="lifestyle/adil-mirza-assigned-editorial-role-sharik-khan-jr.html" class="news-card">
+            <div class="image-box"><img src="https://i.postimg.cc/59L7ftBQ/Screenshot-2026-0212-211839.jpg"></div>
+            <div class="content-box">
+                <span class="article-category">Team Update</span>
+                <h2 class="article-title">Adil Mirza Assigned Editorial Role in Sharik Khan Jr’s Creative Team</h2>
+                <span class="meta-info">February 12, 2026 | News Desk</span>
+                <span class="read-more-link">Read Full Story →</span>
+            </div>
+        </a>
+
+        <a href="lifestyle/republic-day-2026-sharik-khan-jr-tribute.html" class="news-card">
+            <div class="image-box"><img src="https://i.postimg.cc/br8s9Fv2/Sharik_khan_jr_26_January.png"></div>
+            <div class="content-box">
+                <span class="article-category">National Day</span>
+                <h2 class="article-title">Republic Day 2026: Indian Artist Sharik Khan Jr Pays Tribute to the Nation</h2>
+                <span class="meta-info">January 26, 2026 | Culture</span>
+                <span class="read-more-link">Read Full Story →</span>
+            </div>
+        </a>
+
+        <a href="music/sharik-khan-jr-independent-music-artist.html" class="news-card">
+            <div class="image-box"><img src="https://raw.githubusercontent.com/JRNewsMedia/JRNewsMedia.github.io/refs/heads/main/images/Sharik%20khan%20jr%20music%20artists%20achalpur.png"></div>
+            <div class="content-box">
+                <span class="article-category">Entertainment</span>
+                <h2 class="article-title">Sharik Khan Jr: A Rising Independent Music Artist Making Waves</h2>
+                <span class="meta-info">2025 | Music Desk</span>
+                <span class="read-more-link">Read Full Story →</span>
+            </div>
+        </a>
+
+        <a href="biography/sharik-khan-jr-official-biography-verified-digital-presence.html" class="news-card">
+            <div class="image-box"><img src="https://raw.githubusercontent.com/JRNewsMedia/JRNewsMedia.github.io/refs/heads/main/images/Sharik%20khan%20jr.png"></div>
+            <div class="content-box">
+                <span class="article-category">Biography</span>
+                <h2 class="article-title">Sharik Khan Jr: Official Biography, Career & Verified Digital Identity</h2>
+                <span class="meta-info">January 11, 2026 | Biography Desk</span>
+                <span class="read-more-link">Read Full Story →</span>
+            </div>
+        </a>
+
+        <a href="music/sharik-khan-jr-shakir-dada-music-news.html" class="news-card">
+            <div class="image-box"><img src="https://m.media-amazon.com/images/I/41PX553WtjL._SX354_SY354_BL0_QL100__UXNaN_FMjpg_QL85_.jpg"></div>
+            <div class="content-box">
+                <span class="article-category">Special Release</span>
+                <h2 class="article-title">Sharik Khan Jr Releases Four Songs Dedicated to Shakir Dada</h2>
+                <span class="meta-info">January 2026 | Music Desk</span>
+                <span class="read-more-link">Read Full Story →</span>
+            </div>
+        </a>
+
+        <a href="lifestyle/mahee-sharik-jrnews.html" class="news-card">
+            <div class="image-box"><img src="https://github.com/Sharikkhanjr/Sharik-khan-jr-birthday-biography-/raw/main/images/Mahee%20pande.jpg"></div>
+            <div class="content-box">
+                <span class="article-category">Celebrity</span>
+                <h2 class="article-title">Digital Queen Mahee Pande Sends Special Video Wish to Sharik khan jr</h2>
+                <span class="meta-info">November 11, 2025 | News Desk</span>
+                <span class="read-more-link">Read Full Story →</span>
+            </div>
+        </a>
+
+        <a href="lifestyle/shipra-kasana-supports-sharik-khan-jr-english.html" class="news-card">
+            <div class="image-box"><img src="https://raw.githubusercontent.com/Sharikkhanjr/Sharik-khan-jr-birthday-biography-/main/images/Shipra%20Kasana.jpg"></div>
+            <div class="content-box">
+                <span class="article-category">Bollywood</span>
+                <h2 class="article-title">Bollywood Actress Shipra Kasana Backs Sharik khan jr Group</h2>
+                <span class="meta-info">November 9, 2025 | Entertainment</span>
+                <span class="read-more-link">Read Full Story →</span>
+            </div>
+        </a>
+
+        <a href="music/sharik-khan-jr-comeback-news.html" class="news-card">
+            <div class="image-box"><img src="https://raw.githubusercontent.com/JRNewsMedia/JRNewsMedia.github.io/refs/heads/main/images/Are%20kya%20bolti%20Meri%20Achalpur%20Ki%20Public.jpeg"></div>
+            <div class="content-box">
+                <span class="article-category">Regional Hit</span>
+                <h2 class="article-title">Viral 'Achalpur Anthem' Re-Released by Sharik khan jr</h2>
+                <span class="meta-info">November 8, 2025 | Music News</span>
+                <span class="read-more-link">Read Full Story →</span>
+            </div>
+        </a>
+
+        <a href="politics/achalpur-chunav-ghosna-jald.html" class="news-card">
+            <div class="image-box"><img src="images/image-3.png"></div>
+            <div class="content-box">
+                <span class="article-category">Politics</span>
+                <h2 class="article-title">Achalpur Nagar Nigam Chunav Announcement Expected Soon</h2>
+                <span class="meta-info">October 27, 2025 | Local News</span>
+                <span class="read-more-link">Read Full Story →</span>
+            </div>
+        </a>
+
+        <a href="music/sharik-khan-jr-new-song.html" class="news-card">
+            <div class="image-box"><img src="https://raw.githubusercontent.com/JRNewsMedia/JRNewsMedia.github.io/main/images/20251023_143435.jpg"></div>
+            <div class="content-box">
+                <span class="article-category">Music News</span>
+                <h2 class="article-title">Indian Independent Star Sharik Khan Jr's New Hit "MERA ATTITUDE"</h2>
+                <span class="meta-info">October 29, 2025 | News Desk</span>
+                <span class="read-more-link">Read Full Story →</span>
+            </div>
+        </a>
+
+        <article class="news-card" style="text-align: center; border: 2px dashed #3498db; background-color: #f7f9fc; cursor: default;">
+            <div class="content-box">
+                <h2 class="article-title" style="color: #3498db;">STAY TUNED!</h2>
+                <p>New reports are being drafted for Amravati Governance Updates.</p>
+            </div>
+        </article>
+
     </div>
-    
+
     <footer class="footer">
-        &copy; 2025 JR News Media. All rights reserved. | Contact: <a href="mailto:rasimkhan453@gmail.com" style="color: white; text-decoration: none;">rasimkhan453@gmail.com</a>
+        <span class="footer-logo">JR NEWS <span>MEDIA</span></span>
+        <div class="footer-socials">
+            <a href="https://www.instagram.com/sharik.khan.jr">INSTAGRAM</a>
+            <a href="https://www.facebook.com/Sharikkhanjr1">FACEBOOK</a>
+            <a href="https://youtube.com/@sharikkhanjr">YOUTUBE</a>
+        </div>
+        <div class="footer-info">
+            <p>Editorial Desk: sharikk955@gmail.com | Founder: Sharik Khan Jr</p>
+            <p>Providing independent news and media coverage from Achalpur, Maharashtra.</p>
+            <p style="margin-top: 15px;">&copy; 2026 JR News Media Group. All Rights Reserved.</p>
+        </div>
     </footer>
 
 </body>
